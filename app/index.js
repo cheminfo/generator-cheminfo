@@ -119,8 +119,9 @@ module.exports = yeoman.Base.extend({
         this.fs.copyTpl(this.templatePath('cheminfo-js/npm'), this.destinationPath('package.json'), includes);
         this.fs.copyTpl(this.templatePath('cheminfo-js/README.md'), this.destinationPath('README.md'), includes);
         break;
+      /* istanbul ignore next  */
       default:
-        throw new Error('Unsupported organization')
+        throw new Error('Unsupported organization');
     }
   },
 
