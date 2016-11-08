@@ -34,7 +34,7 @@ module.exports = yeoman.Base.extend({
     }, {
       type: 'list',
       name: 'org',
-      message: 'Your project name',
+      message: 'Organization',
       choices: ['ml', 'cheminfo-js'],
       default: 'ml' // Default to current folder name
     }, {
