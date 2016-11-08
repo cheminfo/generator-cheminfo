@@ -20,13 +20,7 @@
     "type": "git",
     "url": "https://github.com/cheminfo-js/<%= name %>.git"
   },
-  "keywords": [
-    "machine",
-    "learning",
-    "data",
-    "mining",
-    "datamining"
-  ],
+  "keywords": [],
   "author": "<%= userName %> <<%= email %>>",
   "license": "MIT",
   "bugs": {
