@@ -23,7 +23,7 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      `Behold the almighty ${chalk.red('generator-app-packages')} generator!`
+      `Behold the almighty ${chalk.red('generator-cheminfo')} generator!`
     ));
 
     var prompts = [{
