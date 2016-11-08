@@ -1,0 +1,47 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "main": "./src/index.js",
+  "files": [<% if (runkit) { %>
+    "runkit.js",<% } %>
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src test",
+    "eslint-fix": "npm run eslint -- --fix",
+    "test": "npm run test-mocha && npm run eslint",
+    <% if (coveralls) { %>"test-cov": "istanbul cover node_modules/.bin/_mocha -- --require should --reporter dot --recursive",
+    "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --require should --reporter dot --recursive",<% } %>
+    "test-mocha": "mocha --require should --reporter mocha-better-spec-reporter",
+    "build": "cheminfo build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cheminfo-js/<%= name %>.git"
+  },
+  "keywords": [
+    "machine",
+    "learning",
+    "data",
+    "mining",
+    "datamining"
+  ],
+  "author": "<%= userName %> <<%= email %>>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cheminfo-js/<%= name %>/issues"
+  },<% if (runkit) { %>
+  "runkitExampleFilename": "./runkit.js",<% } %>
+  "homepage": "https://github.com/cheminfo-js/<%= name %>#readme",
+  "devDependencies": {
+    "cheminfo-tools": "^1.5.0",
+    "eslint": "^3.4.0",
+    "eslint-config-cheminfo": "^1.2.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
+    <% if (coveralls) { %>"istanbul": "^0.4.4",<% } %>
+    "mocha": "^3.1.2",
+    "mocha-better-spec-reporter": "^3.0.2",
+    "should": "^11.1.0"
+  }
+}

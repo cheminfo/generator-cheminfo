@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - v6
+  - v4
+sudo: false
+before_script:
+  - git config user.name Test
+  - git config user.email test@test.com
