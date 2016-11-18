@@ -105,7 +105,9 @@ module.exports = yeoman.Base.extend({
 
     this.fs.copyTpl(this.templatePath('test'), this.destinationPath('test/test.js'), includes);
     this.fs.copyTpl(this.templatePath('index'), this.destinationPath('src/index.js'), includes);
-    this.fs.copyTpl(this.templatePath('runkit'), this.destinationPath('runkit.js'), includes);
+    if (this.props.runkit) {
+      this.fs.copyTpl(this.templatePath('runkit'), this.destinationPath('runkit.js'), includes);
+    }
     this.fs.copyTpl(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'), includes);
 
     switch (this.props.org) {
