@@ -5,7 +5,7 @@
   <% if (coveralls) { %>[![Test coverage][coveralls-image]][coveralls-url]<% } %>
   [![David deps][david-image]][david-url]
   [![npm download][download-image]][download-url]
-  
+
 <%= description %>
 
 ## Installation
@@ -20,7 +20,7 @@
 const <%= camelName %> = require('ml-<%= name %>');
 ```
 <% if (runkit) { %>
-Or test it in [Runkit](https://runkit.com/npm/<%= name %>)<% } %>
+Or test it in [Runkit](https://runkit.com/npm/ml-<%= name %>)<% } %>
 
 ## License
 
