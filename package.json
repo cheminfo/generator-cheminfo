@@ -18,6 +18,7 @@
   "dependencies": {
     "camelcase": "^3.0.0",
     "chalk": "^1.0.0",
+    "which": "^1.2.12",
     "yeoman-generator": "^0.24.1",
     "yosay": "^1.0.0"
   },

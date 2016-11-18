@@ -5,6 +5,8 @@ const yeoman = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const path = require('path');
+const which = require('which');
+const camelCase = require('camelcase');
 
 let username = ' ';
 let email = ' ';
@@ -17,7 +19,13 @@ try {
   console.error('Missing git configuration');
 }
 
-const camelCase = require('camelcase');
+let yarn;
+try {
+  which.sync('yarn');
+  yarn = true;
+} catch (e) {
+  yarn = false;
+}
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -68,11 +76,21 @@ module.exports = yeoman.Base.extend({
       name: 'runkit',
       message: 'Do you want to create a Runkit file example?',
       default: false
-    }, {
-      type: 'confirm',
-      name: 'install',
-      message: 'Run NPM install?'
     }];
+
+    if (yarn) {
+      prompts.push({
+        type: 'confirm',
+        name: 'install',
+        message: 'Run yarn install?'
+      });
+    } else {
+      prompts.push({
+        type: 'confirm',
+        name: 'install',
+        message: 'Run NPM install?'
+      });
+    }
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.name;
@@ -128,9 +146,13 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    /* istanbul ignore else  */
+    /* istanbul ignore next  */
     if (this.props.install) {
-      this.npmInstall();
+      if (yarn) {
+        this.spawnCommand('yarn', ['install']);
+      } else {
+        this.npmInstall();
+      }
     }
   }
 });
