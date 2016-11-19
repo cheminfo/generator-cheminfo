@@ -149,7 +149,7 @@ module.exports = yeoman.Base.extend({
     /* istanbul ignore next  */
     if (this.props.install) {
       if (yarn) {
-        this.spawnCommand('yarn', ['install']);
+        this.spawnCommand('yarn');
       } else {
         this.npmInstall();
       }
