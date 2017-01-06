@@ -1,12 +1,13 @@
 'use strict';
 
 const cp = require('child_process');
-const yeoman = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
 const path = require('path');
-const which = require('which');
+
 const camelCase = require('camelcase');
+const chalk = require('chalk');
+const which = require('which');
+const Generator = require('yeoman-generator');
+const yosay = require('yosay');
 
 let username = ' ';
 let email = ' ';
@@ -27,8 +28,8 @@ try {
   yarn = false;
 }
 
-module.exports = yeoman.Base.extend({
-  prompting: function () {
+module.exports = class extends Generator {
+  prompting() {
     // Have Yeoman greet the user.
     this.log(yosay(
       `Behold the almighty ${chalk.red('generator-cheminfo')} generator!`
@@ -68,7 +69,7 @@ module.exports = yeoman.Base.extend({
       default: '0.0.1'
     }, {
       type: 'confirm',
-      name: 'coveralls',
+      name: 'codecov',
       message: 'Do you want to install coverage tool?',
       default: false
     }, {
@@ -96,9 +97,9 @@ module.exports = yeoman.Base.extend({
       // To access props later use this.props.name;
       this.props = props;
     }.bind(this));
-  },
+  }
 
-  writing: function () {
+  writing() {
     var date = new Date();
     var day = date.getDate();
     var month = date.getMonth();
@@ -113,7 +114,7 @@ module.exports = yeoman.Base.extend({
       date: year + '-' + month + '-' + day,
       year: year,
       camelName: camelName,
-      coveralls: this.props.coveralls,
+      codecov: this.props.codecov,
       runkit: this.props.runkit
     };
 
@@ -143,9 +144,9 @@ module.exports = yeoman.Base.extend({
       default:
         throw new Error('Unsupported organization');
     }
-  },
+  }
 
-  install: function () {
+  install() {
     /* istanbul ignore next  */
     if (this.props.install) {
       if (yarn) {
@@ -155,4 +156,4 @@ module.exports = yeoman.Base.extend({
       }
     }
   }
-});
+};

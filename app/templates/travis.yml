@@ -3,5 +3,5 @@ node_js:
   - node
   - lts/boron # v6
   - lts/argon # v4
-<% if (coveralls) { %>script: "npm run test-travis "
-after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"<% } %>
+<% if (codecov) { %>script: "npm run test-travis "
+after_script: "bash <(curl -s https://codecov.io/bash)"<% } %>
