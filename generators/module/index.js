@@ -92,6 +92,7 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(this.templatePath('LICENSE'), this.destinationPath('LICENSE'), includes);
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), includes);
+    this.fs.copyTpl(this.templatePath('package'), this.destinationPath('package.json'), includes);
   }
 
   install() {
