@@ -89,6 +89,8 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
     this.fs.copy(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'));
     this.fs.copy(this.templatePath('rollup.config.js'), this.destinationPath('rollup.config.js'));
+    this.fs.copy(this.templatePath('index.js'), this.destinationPath('src/index.js'));
+    this.fs.copy(this.templatePath('test.js'), this.destinationPath('src/__tests__/test.js'));
 
     this.fs.copyTpl(this.templatePath('LICENSE'), this.destinationPath('LICENSE'), includes);
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), includes);
