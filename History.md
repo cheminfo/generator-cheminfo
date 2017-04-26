@@ -1,3 +1,8 @@
+<a name="2.2.2"></a>
+## [2.2.2](https://github.com/cheminfo/generator-cheminfo/compare/v2.2.1...v2.2.2) (2017-04-26)
+
+
+
 <a name="2.2.1"></a>
 ## [2.2.1](https://github.com/cheminfo/generator-cheminfo/compare/v2.2.0...v2.2.1) (2017-04-26)
 
