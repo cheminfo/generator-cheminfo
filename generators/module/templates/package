@@ -1,0 +1,29 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "eslint": "eslint src",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepublish": "rollup -c",
+    "test": "run-s testonly eslint",
+    "testonly": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= org %>/<%= name %>.git"
+  },
+  "keywords": [],
+  "author": "<%= userName %>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= org %>/<%= name %>/issues"
+  },
+  "homepage": "https://github.com/<%= org %>/<%= name %>#readme"
+}
