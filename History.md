@@ -1,3 +1,13 @@
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/cheminfo/generator-cheminfo/compare/v2.1.0...v2.2.0) (2017-04-26)
+
+
+### Features
+
+* add module generator ([e228c72](https://github.com/cheminfo/generator-cheminfo/commit/e228c72))
+
+
+
 <a name="1.9.3"></a>
 ## [1.9.3](https://github.com/mljs/generator-mljs-packages/compare/v1.9.2...v1.9.3) (2016-10-04)
 
