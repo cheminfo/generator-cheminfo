@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/<%= org %>/<%= name %>/issues"
   },
-  "homepage": "https://github.com/<%= org %>/<%= name %>#readme"
+  "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
