@@ -7,7 +7,7 @@ const helpers = require('yeoman-test');
 
 describe('ml', function () {
   before(function () {
-    return helpers.run(path.join(__dirname, '../app'))
+    return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         userName: 'cheminfo',
         org: 'ml',
@@ -32,7 +32,7 @@ describe('ml', function () {
 
 describe('ml', function () {
   before(function () {
-    return helpers.run(path.join(__dirname, '../app'))
+    return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         userName: 'cheminfo',
         org: 'ml',
@@ -59,7 +59,7 @@ describe('ml', function () {
 
 describe('cheminfo-js', function () {
   before(function () {
-    return helpers.run(path.join(__dirname, '../app'))
+    return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         userName: 'cheminfo',
         org: 'cheminfo-js',
