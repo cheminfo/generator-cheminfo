@@ -68,12 +68,14 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth();
-    var year = date.getFullYear();
-    var camelName = camelCase(this.props.name);
-    var includes = {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const camelName = camelCase(this.props.name);
+    const prefix = this.props.org === 'mljs' ? 'ml-' : '';
+    const includes = {
+      npmName: prefix + this.props.name,
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,

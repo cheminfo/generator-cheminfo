@@ -8,12 +8,12 @@
 
 ## Installation
 
-`$ npm install --save <%= name %>`
+`$ npm install --save <%= npmName %>`
 
 ## Usage
 
 ```js
-import library from '<%= name %>';
+import library from '<%= npmName %>';
 
 const result = library(args);
 // result is ...
@@ -25,9 +25,9 @@ const result = library(args);
 
   [MIT](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/<%= name %>.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/<%= name %>
+[npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/<%= npmName %>
 [travis-image]: https://img.shields.io/travis/<%= org %>/<%= name %>/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/<%= org %>/<%= name %>
-[download-image]: https://img.shields.io/npm/dm/<%= name %>.svg?style=flat-square
-[download-url]: https://npmjs.org/package/<%= name %>
+[download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg?style=flat-square
+[download-url]: https://npmjs.org/package/<%= npmName %>
