@@ -101,7 +101,6 @@ module.exports = class extends Generator {
 
   install() {
     const deps = [
-      'babel-jest',
       'babel-plugin-transform-es2015-modules-commonjs',
       'eslint',
       'eslint-config-cheminfo',
