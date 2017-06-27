@@ -12,7 +12,8 @@
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublish": "rollup -c",
-    "test": "run-s testonly eslint",
+    "test": "run-s testonly eslint",<% if (codecov) { %>
+    "test-travis": "eslint src && jest --coverage && codecov",<% } %>
     "testonly": "jest"
   },
   "repository": {

@@ -59,6 +59,11 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'description',
       message: 'Your package description'
+    }, {
+      type: 'confirm',
+      name: 'codecov',
+      message: 'Do you want to install coverage tool?',
+      default: false
     }];
 
     return this.prompt(prompts).then(function (props) {
@@ -80,6 +85,7 @@ module.exports = class extends Generator {
       org: this.props.org,
       userName: this.props.userName,
       email: this.props.email,
+      codecov: this.props.codecov,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
@@ -89,7 +95,6 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('babelrc'), this.destinationPath('.babelrc'));
     this.fs.copy(this.templatePath('eslintrc.yml'), this.destinationPath('.eslintrc.yml'));
     this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
-    this.fs.copy(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'));
     this.fs.copy(this.templatePath('rollup.config.js'), this.destinationPath('rollup.config.js'));
     this.fs.copy(this.templatePath('index.js'), this.destinationPath('src/index.js'));
     this.fs.copy(this.templatePath('test.js'), this.destinationPath('src/__tests__/test.js'));
@@ -97,10 +102,11 @@ module.exports = class extends Generator {
     this.fs.copyTpl(this.templatePath('LICENSE'), this.destinationPath('LICENSE'), includes);
     this.fs.copyTpl(this.templatePath('README.md'), this.destinationPath('README.md'), includes);
     this.fs.copyTpl(this.templatePath('package'), this.destinationPath('package.json'), includes);
+    this.fs.copyTpl(this.templatePath('travis.yml'), this.destinationPath('.travis.yml'), includes);
   }
 
   install() {
-    const deps = [
+    let deps = [
       'babel-plugin-transform-es2015-modules-commonjs',
       'eslint',
       'eslint-config-cheminfo',
@@ -109,6 +115,10 @@ module.exports = class extends Generator {
       'npm-run-all',
       'rollup'
     ];
+
+    if (this.props.codecov) {
+      deps.push('codecov');
+    }
     if (yarn) {
       this.yarnInstall(deps, {dev: true});
     } else {
