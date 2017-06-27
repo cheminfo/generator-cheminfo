@@ -49,14 +49,12 @@ module.exports = class extends Generator {
       type: 'input',
       name: 'userName',
       message: 'Your name',
-      default: username.substring(0, username.length - 1),
-      store: true
+      default: username.substring(0, username.length - 1)
     }, {
       type: 'input',
       name: 'email',
       message: 'Your email',
-      default: email.substring(0, email.length - 1),
-      store: true
+      default: email.substring(0, email.length - 1)
     }, {
       type: 'input',
       name: 'description',
