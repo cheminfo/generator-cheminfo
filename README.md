@@ -23,6 +23,13 @@ Then generate your new project:
 yo cheminfo
 ```
 
+Other available generators are:
+
+```bash
+yo cheminfo:lerna-module
+yo cheminfo:module
+```
+
 ## Description
 
 The generator will prompt for the next fields:
@@ -55,10 +62,6 @@ When the generator finish there will be the following files:
     ├── .eslintrc.yml
     └── test.js
 ```
-
-## Contributors
-
-* [Miguel Asencio](https://github.com/maasencioh)
 
 ## License
 
