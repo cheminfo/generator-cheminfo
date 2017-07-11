@@ -22,7 +22,7 @@ describe('ml', function () {
       '.travis.yml',
       '.eslintrc.yml',
       'src/index.js',
-      'test/test.js',
+      'src/__test__/test.js',
       'LICENSE',
       'package.json',
       'README.md'
@@ -48,7 +48,7 @@ describe('ml', function () {
       '.travis.yml',
       '.eslintrc.yml',
       'src/index.js',
-      'test/test.js',
+      'src/__test__/test.js',
       'LICENSE',
       'package.json',
       'runkit.js',
@@ -74,7 +74,7 @@ describe('cheminfo-js', function () {
       '.travis.yml',
       '.eslintrc.yml',
       'src/index.js',
-      'test/test.js',
+      'src/__test__/test.js',
       'LICENSE',
       'package.json',
       'README.md'
