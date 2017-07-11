@@ -30,7 +30,7 @@ const result = library(args);
 [npm-url]: https://npmjs.org/package/<%= npmName %>
 [travis-image]: https://img.shields.io/travis/<%= org %>/<%= name %>/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/<%= org %>/<%= name %><% if (codecov) { %>
-[codecov-image]: https://img.shields.io/codecov/c/github/cheminfo-js/<%= name %>.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/cheminfo-js/<%= name %><% } %>
+[codecov-image]: https://img.shields.io/codecov/c/github/<%= org %>/<%= name %>.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/<%= org %>/<%= name %><% } %>
 [download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg?style=flat-square
 [download-url]: https://npmjs.org/package/<%= npmName %>
