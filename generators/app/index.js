@@ -120,10 +120,9 @@ module.exports = class extends Generator {
 
     this.fs.copy(this.templatePath('gitignore'), this.destinationPath('.gitignore'));
     this.fs.copy(this.templatePath('eslintrc.yml'), this.destinationPath('.eslintrc.yml'));
-    this.fs.copy(this.templatePath('eslintrc.test.yml'), this.destinationPath('test/.eslintrc.yml'));
 
-    this.fs.copyTpl(this.templatePath('test'), this.destinationPath('test/test.js'), includes);
     this.fs.copyTpl(this.templatePath('index'), this.destinationPath('src/index.js'), includes);
+    this.fs.copyTpl(this.templatePath('test'), this.destinationPath('src/__test__/test.js'), includes);
     if (this.props.runkit) {
       this.fs.copyTpl(this.templatePath('runkit'), this.destinationPath('runkit.js'), includes);
     }
@@ -147,13 +146,25 @@ module.exports = class extends Generator {
   }
 
   install() {
-    /* istanbul ignore next  */
-    if (this.props.install) {
-      if (yarn) {
-        this.spawnCommand('yarn');
-      } else {
-        this.npmInstall();
-      }
+    let deps = [
+      'eslint',
+      'eslint-config-cheminfo',
+      'eslint-plugin-no-only-tests',
+      'jest',
+      'npm-run-all'
+    ];
+
+    if (this.props.codecov) {
+      deps.push('codecov');
+    }
+    if (this.props.org === 'cheminfo-js') {
+      deps.push('cheminfo-tools');
+    }
+
+    if (yarn) {
+      this.yarnInstall(deps, {dev: true});
+    } else {
+      this.npmInstall(deps, {'save-dev': true});
     }
   }
 };

@@ -2,9 +2,8 @@
 
 const <%= camelName %> = require('..');
 
-describe('<%= name %> test', function () {
-
-    it('Something to test', function () {
-        (true).should.be.equal(true);
+describe('<%= name %> test', () => {
+    it('Something to test', () => {
+        expect(<%= camelName %>()).toBe(true);
     });
 });
