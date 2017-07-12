@@ -122,7 +122,7 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('eslintrc.yml'), this.destinationPath('.eslintrc.yml'));
 
     this.fs.copyTpl(this.templatePath('index'), this.destinationPath('src/index.js'), includes);
-    this.fs.copyTpl(this.templatePath('test'), this.destinationPath('src/__test__/test.js'), includes);
+    this.fs.copyTpl(this.templatePath('test'), this.destinationPath('src/__tests__/test.js'), includes);
     if (this.props.runkit) {
       this.fs.copyTpl(this.templatePath('runkit'), this.destinationPath('runkit.js'), includes);
     }
