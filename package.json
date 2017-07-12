@@ -16,16 +16,16 @@
   ],
   "dependencies": {
     "camelcase": "^4.0.0",
-    "chalk": "^1.0.0",
+    "chalk": "^2.0.1",
     "which": "^1.2.12",
     "yeoman-generator": "^1.0.1",
     "yosay": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.10.2",
+    "eslint": "^4.2.0",
     "eslint-config-xo-space": "^0.16.0",
     "gulp": "^3.9.0",
-    "gulp-eslint": "^3.0.1",
+    "gulp-eslint": "^4.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^1.0.0",
     "gulp-line-ending-corrector": "^1.0.1",
