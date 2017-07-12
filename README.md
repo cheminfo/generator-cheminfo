@@ -56,11 +56,10 @@ When the generator finish there will be the following files:
 ├── README.md
 ├── package.json
 ├── runkit.js
-├── src
-│   └── index.js
-└── test
-    ├── .eslintrc.yml
-    └── test.js
+└── src
+    ├── index.js
+    └── __test__
+        └── test.js
 ```
 
 ## License
