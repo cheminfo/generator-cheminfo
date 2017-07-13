@@ -1,8 +1,8 @@
 # <%= name %>
 
   [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]
-  <% if (codecov) { %>[![Test coverage][codecov-image]][codecov-url]<% } %>
+  [![build status][travis-image]][travis-url]<% if (codecov) { %>
+  [![Test coverage][codecov-image]][codecov-url]<% } %>
   [![David deps][david-image]][david-url]
   [![npm download][download-image]][download-url]
   
