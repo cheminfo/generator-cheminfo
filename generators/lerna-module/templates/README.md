@@ -23,6 +23,6 @@ const result = library(args);
   [MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/<%= npmName %>
+[npm-url]: https://www.npmjs.com/package/<%= npmName %>
 [download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg?style=flat-square
-[download-url]: https://npmjs.org/package/<%= npmName %>
+[download-url]: https://www.npmjs.com/package/<%= npmName %>
