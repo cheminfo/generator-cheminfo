@@ -20,14 +20,6 @@ try {
   console.error('Missing git configuration');
 }
 
-let yarn;
-try {
-  which.sync('yarn');
-  yarn = true;
-} catch (e) {
-  yarn = false;
-}
-
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.

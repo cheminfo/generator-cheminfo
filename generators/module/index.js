@@ -20,14 +20,6 @@ try {
   console.error('Missing git configuration');
 }
 
-let yarn;
-try {
-  which.sync('yarn');
-  yarn = true;
-} catch (e) {
-  yarn = false;
-}
-
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -119,10 +111,7 @@ module.exports = class extends Generator {
     if (this.props.codecov) {
       deps.push('codecov');
     }
-    if (yarn) {
-      this.yarnInstall(deps, {dev: true});
-    } else {
-      this.npmInstall(deps, {'save-dev': true});
-    }
+
+    this.npmInstall(deps, {'save-dev': true});
   }
 };
