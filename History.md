@@ -1,3 +1,15 @@
+<a name="3.0.3"></a>
+## [3.0.3](https://github.com/cheminfo/generator-cheminfo/compare/v3.0.2...v3.0.3) (2017-07-21)
+
+
+### Bug Fixes
+
+* __tests__ as test ([#10](https://github.com/cheminfo/generator-cheminfo/issues/10)) ([c2e09de](https://github.com/cheminfo/generator-cheminfo/commit/c2e09de))
+* remove unnecessary extra space ([6638c18](https://github.com/cheminfo/generator-cheminfo/commit/6638c18))
+* update npmjs URL ([4692e75](https://github.com/cheminfo/generator-cheminfo/commit/4692e75))
+
+
+
 <a name="2.3.1"></a>
 ## [2.3.1](https://github.com/cheminfo/generator-cheminfo/compare/v2.3.0...v2.3.1) (2017-06-02)
 
