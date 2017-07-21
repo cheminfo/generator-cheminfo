@@ -20,14 +20,6 @@ try {
   console.error('Missing git configuration');
 }
 
-let yarn;
-try {
-  which.sync('yarn');
-  yarn = true;
-} catch (e) {
-  yarn = false;
-}
-
 module.exports = class extends Generator {
   prompting() {
     // Have Yeoman greet the user.
@@ -79,19 +71,11 @@ module.exports = class extends Generator {
       default: false
     }];
 
-    if (yarn) {
-      prompts.push({
-        type: 'confirm',
-        name: 'install',
-        message: 'Run yarn install?'
-      });
-    } else {
-      prompts.push({
-        type: 'confirm',
-        name: 'install',
-        message: 'Run NPM install?'
-      });
-    }
+    prompts.push({
+      type: 'confirm',
+      name: 'install',
+      message: 'Run NPM install?'
+    });
 
     return this.prompt(prompts).then(function (props) {
       // To access props later use this.props.name;
@@ -161,10 +145,6 @@ module.exports = class extends Generator {
       deps.push('cheminfo-tools');
     }
 
-    if (yarn) {
-      this.yarnInstall(deps, {dev: true});
-    } else {
-      this.npmInstall(deps, {'save-dev': true});
-    }
+    this.npmInstall(deps, {'save-dev': true});
   }
 };
