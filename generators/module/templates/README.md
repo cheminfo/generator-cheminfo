@@ -27,10 +27,10 @@ const result = library(args);
   [MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/<%= npmName %>
+[npm-url]: https://www.npmjs.com/package/<%= npmName %>
 [travis-image]: https://img.shields.io/travis/<%= org %>/<%= name %>/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/<%= org %>/<%= name %><% if (codecov) { %>
 [codecov-image]: https://img.shields.io/codecov/c/github/<%= org %>/<%= name %>.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/<%= org %>/<%= name %><% } %>
 [download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg?style=flat-square
-[download-url]: https://npmjs.org/package/<%= npmName %>
+[download-url]: https://www.npmjs.com/package/<%= npmName %>
