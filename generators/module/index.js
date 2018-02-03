@@ -145,6 +145,7 @@ module.exports = class extends Generator {
       'babel-plugin-transform-es2015-modules-commonjs',
       'eslint',
       'eslint-config-cheminfo',
+      'eslint-plugin-import',
       'eslint-plugin-jest',
       'jest',
       'npm-run-all',
