@@ -12,9 +12,9 @@
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
-    "test": "run-s testonly eslint",<% if (codecov) { %>
+    "test": "run-s test-only eslint",<% if (codecov) { %>
     "test-travis": "eslint src && jest --coverage && codecov",<% } %>
-    "testonly": "jest"
+    "test-only": "jest"
   },
   "repository": {
     "type": "git",
