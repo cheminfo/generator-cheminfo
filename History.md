@@ -1,3 +1,8 @@
+<a name="3.0.10"></a>
+## [3.0.10](https://github.com/cheminfo/generator-cheminfo/compare/v3.0.9...v3.0.10) (2018-04-24)
+
+
+
 <a name="3.0.9"></a>
 ## [3.0.9](https://github.com/cheminfo/generator-cheminfo/compare/v3.0.8...v3.0.9) (2018-01-25)
 
