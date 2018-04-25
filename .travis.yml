@@ -1,8 +1,7 @@
 language: node_js
 node_js:
-  - 9
+  - 10
   - 8
-  - 6
 before_script:
   - git config user.name Test
   - git config user.email test@test.com

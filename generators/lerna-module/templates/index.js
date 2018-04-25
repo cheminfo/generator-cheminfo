@@ -3,5 +3,5 @@
  * @return {number}
  */
 export default function myModule() {
-    return 42;
+  return 42;
 }

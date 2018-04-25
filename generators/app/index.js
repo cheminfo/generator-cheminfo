@@ -190,6 +190,7 @@ module.exports = class extends Generator {
     let deps = [
       'eslint',
       'eslint-config-cheminfo',
+      'eslint-plugin-import',
       'eslint-plugin-jest',
       'jest',
       'npm-run-all'
