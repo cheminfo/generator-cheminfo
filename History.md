@@ -1,3 +1,13 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/cheminfo/generator-cheminfo/compare/v3.0.10...v3.1.0) (2018-04-25)
+
+
+### Features
+
+* replace Node 9 with Node 10 ([83ff7f7](https://github.com/cheminfo/generator-cheminfo/commit/83ff7f7))
+
+
+
 <a name="3.0.10"></a>
 ## [3.0.10](https://github.com/cheminfo/generator-cheminfo/compare/v3.0.9...v3.0.10) (2018-04-24)
 
