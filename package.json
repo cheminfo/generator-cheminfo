@@ -21,10 +21,10 @@
     "yosay": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
-    "eslint-config-xo-space": "^0.17.0",
+    "eslint": "^5.4.0",
+    "eslint-config-xo-space": "^0.20.0",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
     "gulp-exclude-gitignore": "^1.2.0",
     "gulp-istanbul": "^1.1.2",
     "gulp-line-ending-corrector": "^1.0.1",
