@@ -5,7 +5,6 @@ const path = require('path');
 
 const camelCase = require('camelcase');
 const chalk = require('chalk');
-const which = require('which');
 const Generator = require('yeoman-generator');
 const yosay = require('yosay');
 
