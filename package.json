@@ -48,7 +48,6 @@
   },
   "homepage": "https://github.com/cheminfo/generator-cheminfo#readme",
   "scripts": {
-    "prepublishOnly": "gulp prepublish",
     "test": "gulp"
   },
   "license": "MIT"
