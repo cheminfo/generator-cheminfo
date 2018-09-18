@@ -28,6 +28,7 @@ Other available generators are:
 ```bash
 yo cheminfo:lerna-module
 yo cheminfo:module
+yo cheminfo:typescript
 ```
 
 ## Description
