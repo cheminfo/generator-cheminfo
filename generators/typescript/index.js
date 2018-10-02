@@ -65,7 +65,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(
-      function (props) {
+      function(props) {
         // To access props later use this.props.name;
         this.props = props;
       }.bind(this)
@@ -105,8 +105,8 @@ module.exports = class extends Generator {
       this.destinationPath('tsconfig.es6.json')
     );
     this.fs.copy(
-      this.templatePath('tslint.json'),
-      this.destinationPath('tslint.json')
+      this.templatePath('tslint.yml'),
+      this.destinationPath('tslint.yml')
     );
     this.fs.copy(
       this.templatePath('gitignore'),
@@ -151,10 +151,11 @@ module.exports = class extends Generator {
       'rimraf',
       'ts-jest',
       'tslint',
+      'tslint-config-cheminfo',
       'tslint-config-prettier',
       'typescript'
     ];
 
-    this.npmInstall(deps, {'save-dev': true});
+    this.npmInstall(deps, { 'save-dev': true });
   }
 };
