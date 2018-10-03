@@ -105,8 +105,8 @@ module.exports = class extends Generator {
       this.destinationPath('tsconfig.es6.json')
     );
     this.fs.copy(
-      this.templatePath('tslint.yml'),
-      this.destinationPath('tslint.yml')
+      this.templatePath('tslint.json'),
+      this.destinationPath('tslint.json')
     );
     this.fs.copy(
       this.templatePath('gitignore'),
