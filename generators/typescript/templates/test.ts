@@ -1,4 +1,4 @@
-import {myModule} from '..';
+import { myModule } from '..';
 
 describe('test myModule', () => {
   it('should return 42', () => {
