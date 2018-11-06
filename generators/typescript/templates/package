@@ -5,30 +5,30 @@
   "main": "./lib/index.js",
   "module": "./lib-es6/index.js",
   "types": "./lib/index.d.ts",
+  "keywords": [],
+  "author": "<%= userName %>",
+  "license": "MIT",
   "files": [
     "lib",
     "lib-es6"
   ],
   "scripts": {
     "clean": "rimraf lib lib-es6",
+    "eslint": "eslint src --ext ts --cache",
+    "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "npm run tsc",
-    "test": "run-s test-only tslint",
+    "test": "npm run test-only && npm run eslint",
     "test-only": "jest",
-    "test-coverage": "jest --coverage",<% if (codecov) { %>
-    "test-travis": "run-s tslint test-coverage",<% } %>
-    "tsc": "run-s clean tsc-es5 tsc-es6",
+    "test-coverage": "npm run test-only --coverage",<% if (codecov) { %>
+    "test-travis": "npm run test-coverage && npm run eslint",<% } %>
+    "tsc": "npm run clean && npm run tsc-es5 && npm run tsc-es6",
     "tsc-es5": "tsc",
-    "tsc-es6": "tsc --project tsconfig.es6.json",
-    "tslint": "tslint --project tsconfig.base.json",
-    "tslint-fix": "npm run tslint -- --fix"
+    "tsc-es6": "tsc --project tsconfig.es6.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/<%= org %>/<%= name %>.git"
   },
-  "keywords": [],
-  "author": "<%= userName %>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/<%= org %>/<%= name %>/issues"
   },
