@@ -20,7 +20,7 @@
     "url": "https://github.com/cheminfo-js/<%= name %>.git"
   },
   "keywords": [],
-  "author": "<%= userName %> <<%= email %>>",
+  "author": "<%= userName %>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cheminfo-js/<%= name %>/issues"

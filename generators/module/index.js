@@ -9,11 +9,9 @@ const Generator = require('yeoman-generator');
 const yosay = require('yosay');
 
 let username = ' ';
-let email = ' ';
 
 try {
   username = cp.execSync('git config user.name').toString();
-  email = cp.execSync('git config user.email').toString();
 } catch (e) {
   /* istanbul ignore next */
   console.error('Missing git configuration');
@@ -44,12 +42,6 @@ module.exports = class extends Generator {
         name: 'userName',
         message: 'Your name',
         default: username.substring(0, username.length - 1)
-      },
-      {
-        type: 'input',
-        name: 'email',
-        message: 'Your email',
-        default: email.substring(0, email.length - 1)
       },
       {
         type: 'input',
@@ -84,7 +76,6 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      email: this.props.email,
       codecov: this.props.codecov,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
