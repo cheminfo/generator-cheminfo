@@ -1,10 +1,10 @@
 # generator-cheminfo
 
-  [![NPM version][npm-image]][npm-url]
-  [![Build Status][travis-image]][travis-url]
-  [![Dependency Status][daviddm-image]][daviddm-url]
-  [![Coverage percentage][coveralls-image]][coveralls-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![Coverage percentage][coveralls-image]][coveralls-url]
+[![npm download][download-image]][download-url]
 
 > Generator for the different cheminfo organizations
 
@@ -35,15 +35,14 @@ yo cheminfo:typescript
 
 The generator will prompt for the next fields:
 
-  * __Your project name__: the package name, without the `ml-` start for ml.js organization
-  * __Organization__: choose the desired organization, the supported ones are __ml__ and __cheminfo-js__
-  * __Your name__: your [NPM name](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)
-  * __Your email__: your email
-  * __Your package description__: A description to show in [NPM](https://docs.npmjs.com/files/package.json#description-1)
-  * __Your package version__: The package version. The default value is `0.0.1`
-  * __Do you want to install coverage tool?__: Add the coveralls badge and scripts. The default value is `false`
-  * __Do you want to create a Runkit file example?__: Add the example displayed in NPM. The default value is `false`
-  * __Run NPM install?__: Run `npm install` after the template generation
+- **Your project name**: the package name, without the `ml-` start for ml.js organization
+- **Organization**: choose the desired organization, the supported ones are **ml** and **cheminfo-js**
+- **Your name**: your [NPM name](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)
+- **Your package description**: A description to show in [NPM](https://docs.npmjs.com/files/package.json#description-1)
+- **Your package version**: The package version. The default value is `0.0.1`
+- **Do you want to install coverage tool?**: Add the coveralls badge and scripts. The default value is `false`
+- **Do you want to create a Runkit file example?**: Add the example displayed in NPM. The default value is `false`
+- **Run NPM install?**: Run `npm install` after the template generation
 
 When the generator finish there will be the following files:
 
