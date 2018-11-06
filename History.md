@@ -1,3 +1,20 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.0.0...v4.1.0) (2018-11-06)
+
+
+### Bug Fixes
+
+* stop asking for email ([375f5df](https://github.com/cheminfo/generator-cheminfo/commit/375f5df)), closes [#16](https://github.com/cheminfo/generator-cheminfo/issues/16)
+
+
+### Features
+
+* add isNode question to TypeScript generator ([cbcc1af](https://github.com/cheminfo/generator-cheminfo/commit/cbcc1af)), closes [#15](https://github.com/cheminfo/generator-cheminfo/issues/15)
+* add Node 11 to travis configs ([d6f3504](https://github.com/cheminfo/generator-cheminfo/commit/d6f3504))
+* replace tslint with eslint in typescript generator ([75b6711](https://github.com/cheminfo/generator-cheminfo/commit/75b6711))
+
+
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/cheminfo/generator-cheminfo/compare/v3.1.1...v4.0.0) (2018-08-24)
 
