@@ -50,6 +50,12 @@ module.exports = class extends Generator {
       },
       {
         type: 'confirm',
+        name: 'node',
+        message: 'Is it a Node.js-only library?',
+        default: false
+      },
+      {
+        type: 'confirm',
         name: 'codecov',
         message: 'Do you want to install coverage tool?',
         default: false
@@ -76,6 +82,7 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
+      notOnlyNode: !this.props.node,
       codecov: this.props.codecov,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
@@ -86,17 +93,15 @@ module.exports = class extends Generator {
       this.templatePath('tsconfig.json'),
       this.destinationPath('tsconfig.json')
     );
-    this.fs.copy(
-      this.templatePath('tsconfig.es6.json'),
-      this.destinationPath('tsconfig.es6.json')
-    );
+    if (includes.notOnlyNode) {
+      this.fs.copy(
+        this.templatePath('tsconfig.es6.json'),
+        this.destinationPath('tsconfig.es6.json')
+      );
+    }
     this.fs.copy(
       this.templatePath('eslintrc.yml'),
       this.destinationPath('.eslintrc.yml')
-    );
-    this.fs.copy(
-      this.templatePath('gitignore'),
-      this.destinationPath('.gitignore')
     );
     this.fs.copy(
       this.templatePath('index.ts'),
@@ -107,6 +112,11 @@ module.exports = class extends Generator {
       this.destinationPath('src/__tests__/test.ts')
     );
 
+    this.fs.copyTpl(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore'),
+      includes
+    );
     this.fs.copyTpl(
       this.templatePath('LICENSE'),
       this.destinationPath('LICENSE'),
