@@ -65,7 +65,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(
-      function(props) {
+      function (props) {
         // To access props later use this.props.name;
         this.props = props;
       }.bind(this)
@@ -91,11 +91,6 @@ module.exports = class extends Generator {
       year: year,
       camelName: camelName
     };
-
-    this.fs.copy(
-      this.templatePath('tsconfig.base.json'),
-      this.destinationPath('tsconfig.base.json')
-    );
     this.fs.copy(
       this.templatePath('tsconfig.json'),
       this.destinationPath('tsconfig.json')
@@ -105,8 +100,8 @@ module.exports = class extends Generator {
       this.destinationPath('tsconfig.es6.json')
     );
     this.fs.copy(
-      this.templatePath('tslint.json'),
-      this.destinationPath('tslint.json')
+      this.templatePath('eslintrc.yml'),
+      this.destinationPath('.eslintrc.yml')
     );
     this.fs.copy(
       this.templatePath('gitignore'),
@@ -146,16 +141,19 @@ module.exports = class extends Generator {
   install() {
     let deps = [
       '@types/jest',
+      'eslint',
+      'eslint-config-cheminfo',
+      'eslint-config-cheminfo-typescript',
+      'eslint-plugin-import',
+      'eslint-plugin-jest',
+      'eslint-plugin-typescript',
       'jest',
-      'npm-run-all',
       'rimraf',
       'ts-jest',
-      'tslint',
-      'tslint-config-cheminfo',
-      'tslint-config-prettier',
-      'typescript'
+      'typescript',
+      'typescript-eslint-parser'
     ];
 
-    this.npmInstall(deps, { 'save-dev': true });
+    this.npmInstall(deps, {'save-dev': true});
   }
 };
