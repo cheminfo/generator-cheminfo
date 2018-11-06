@@ -75,5 +75,5 @@ typings/
 # FuseBox cache
 .fusebox/
 
-lib
-lib-es6
+lib<% if (notOnlyNode) { %>
+lib-es6<% } %>

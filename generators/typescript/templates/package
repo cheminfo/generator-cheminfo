@@ -2,18 +2,18 @@
   "name": "<%= npmName %>",
   "version": "0.0.0",
   "description": "<%= description %>",
-  "main": "./lib/index.js",
-  "module": "./lib-es6/index.js",
+  "main": "./lib/index.js",<% if (notOnlyNode) { %>
+  "module": "./lib-es6/index.js",<% } %>
   "types": "./lib/index.d.ts",
   "keywords": [],
   "author": "<%= userName %>",
   "license": "MIT",
   "files": [
-    "lib",
-    "lib-es6"
+    "lib"<% if (notOnlyNode) { %>,
+    "lib-es6"<% } %>
   ],
   "scripts": {
-    "clean": "rimraf lib lib-es6",
+    "clean": "rimraf lib<% if (notOnlyNode) { %> lib-es6<% } %>",
     "eslint": "eslint src --ext ts --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "npm run tsc",
@@ -21,9 +21,9 @@
     "test-only": "jest",
     "test-coverage": "npm run test-only --coverage",<% if (codecov) { %>
     "test-travis": "npm run test-coverage && npm run eslint",<% } %>
-    "tsc": "npm run clean && npm run tsc-es5 && npm run tsc-es6",
-    "tsc-es5": "tsc",
-    "tsc-es6": "tsc --project tsconfig.es6.json"
+    "tsc": "npm run clean && npm run tsc-es5<% if (notOnlyNode) { %> && npm run tsc-es6<% } %>",
+    "tsc-es5": "tsc"<% if (notOnlyNode) { %>,
+    "tsc-es6": "tsc --project tsconfig.es6.json"<% } %>
   },
   "repository": {
     "type": "git",
