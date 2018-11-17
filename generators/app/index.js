@@ -32,11 +32,10 @@ module.exports = class extends Generator {
         default: path.basename(this.destinationRoot()) // Default to current folder name
       },
       {
-        type: 'list',
+        type: 'input',
         name: 'org',
-        message: 'Organization',
-        choices: ['ml', 'cheminfo-js'],
-        default: 'ml' // Default to current folder name
+        message: 'GitHub organization',
+        default: 'cheminfo'
       },
       {
         type: 'input',
@@ -77,7 +76,7 @@ module.exports = class extends Generator {
     });
 
     return this.prompt(prompts).then(
-      function(props) {
+      function (props) {
         // To access props later use this.props.name;
         this.props = props;
       }.bind(this)
@@ -192,6 +191,6 @@ module.exports = class extends Generator {
       deps.push('cheminfo-tools');
     }
 
-    this.npmInstall(deps, { 'save-dev': true });
+    this.npmInstall(deps, {'save-dev': true});
   }
 };

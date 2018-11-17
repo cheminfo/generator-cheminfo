@@ -2,8 +2,8 @@
 
 const defaultOptions = {};
 
-function <%= camelName %>(options) {
-    options = Object.assign({}, defaultOptions, options);
+function <%= camelName %>(options={}) {
+    return 42;
 }
 
 module.exports = <%= camelName %>;
