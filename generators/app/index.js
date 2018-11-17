@@ -84,13 +84,16 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth();
-    var year = date.getFullYear();
-    var camelName = camelCase(this.props.name);
-    var includes = {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const camelName = camelCase(this.props.name);
+    const prefix = this.props.org === 'mljs' ? 'ml-' : '';
+    const includes = {
+      npmName: prefix + this.props.name,
       name: this.props.name,
+      org: this.props.org,
       userName: this.props.userName,
       version: this.props.version,
       description: this.props.description,
@@ -133,45 +136,21 @@ module.exports = class extends Generator {
       includes
     );
 
-    switch (this.props.org) {
-      case 'ml':
-        this.fs.copyTpl(
-          this.templatePath('ml/LICENSE'),
-          this.destinationPath('LICENSE'),
-          includes
-        );
-        this.fs.copyTpl(
-          this.templatePath('ml/npm'),
-          this.destinationPath('package.json'),
-          includes
-        );
-        this.fs.copyTpl(
-          this.templatePath('ml/README.md'),
-          this.destinationPath('README.md'),
-          includes
-        );
-        break;
-      case 'cheminfo-js':
-        this.fs.copyTpl(
-          this.templatePath('cheminfo-js/LICENSE'),
-          this.destinationPath('LICENSE'),
-          includes
-        );
-        this.fs.copyTpl(
-          this.templatePath('cheminfo-js/npm'),
-          this.destinationPath('package.json'),
-          includes
-        );
-        this.fs.copyTpl(
-          this.templatePath('cheminfo-js/README.md'),
-          this.destinationPath('README.md'),
-          includes
-        );
-        break;
-      /* istanbul ignore next  */
-      default:
-        throw new Error('Unsupported organization');
-    }
+    this.fs.copyTpl(
+      this.templatePath('LICENSE'),
+      this.destinationPath('LICENSE'),
+      includes
+    );
+    this.fs.copyTpl(
+      this.templatePath('package'),
+      this.destinationPath('package.json'),
+      includes
+    );
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'),
+      includes
+    );
   }
 
   install() {
