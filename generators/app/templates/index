@@ -1,9 +1,8 @@
 'use strict';
 
-const defaultOptions = {};
-
-function <%= camelName %>(options={}) {
-    return 42;
+function abcd(value, options = {}) {
+  const { multiplier = 1 } = options;
+  return value * multiplier;
 }
 
-module.exports = <%= camelName %>;
+module.exports = abcd;

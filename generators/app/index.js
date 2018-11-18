@@ -59,7 +59,7 @@ module.exports = class extends Generator {
         type: 'confirm',
         name: 'codecov',
         message: 'Do you want to install coverage tool?',
-        default: false
+        default: true
       },
       {
         type: 'confirm',
@@ -72,7 +72,8 @@ module.exports = class extends Generator {
     prompts.push({
       type: 'confirm',
       name: 'install',
-      message: 'Run NPM install?'
+      message: 'Run NPM install?',
+      default: 'true'
     });
 
     return this.prompt(prompts).then(

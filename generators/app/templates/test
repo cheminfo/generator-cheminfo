@@ -1,9 +1,10 @@
 'use strict';
 
-const <%= camelName %> = require('..');
+const abcd = require('..');
 
-describe('<%= name %> test', () => {
-    it('Something to test', () => {
-        expect(<%= camelName %>()).toBe(42);
-    });
+describe('abcd test', () => {
+  it('Something to test', () => {
+    expect(abcd(42)).toBe(42);
+    expect(abcd(42, { multiplier: 2 })).toBe(84);
+  });
 });
