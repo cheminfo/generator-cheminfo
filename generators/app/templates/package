@@ -10,10 +10,9 @@
   "scripts": {
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepublishOnly": "rollup -c",
     "test": "npm run test-only && npm run eslint",
-    "test-coverage": "npm run test-only --coverage",<% if (codecov) { %>
-    "test-travis": "npm run test-coverage && npm run eslint",<% } %>
+    "test-coverage": "jest --coverage",
+    "test-travis": "npm run test-coverage && npm run eslint",
     "test-only": "jest"
   },
   "repository": {
