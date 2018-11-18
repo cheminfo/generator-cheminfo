@@ -1,10 +1,10 @@
 'use strict';
 
-const abcd = require('..');
+const myModule = require('..');
 
-describe('abcd test', () => {
+describe('myModule test', () => {
   it('Something to test', () => {
-    expect(abcd(42)).toBe(42);
-    expect(abcd(42, { multiplier: 2 })).toBe(84);
+    expect(myModule(42)).toBe(42);
+    expect(myModule(42, { multiplier: 2 })).toBe(84);
   });
 });

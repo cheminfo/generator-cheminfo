@@ -1,8 +1,8 @@
 'use strict';
 
-function abcd(value, options = {}) {
+function myModule(value, options = {}) {
   const { multiplier = 1 } = options;
   return value * multiplier;
 }
 
-module.exports = abcd;
+module.exports = myModule;
