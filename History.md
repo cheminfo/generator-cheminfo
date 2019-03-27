@@ -1,3 +1,12 @@
+## [4.2.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.2...v4.2.3) (2019-03-27)
+
+
+### Bug Fixes
+
+* **typescript:** correctly pass --coverage to jest ([717a96a](https://github.com/cheminfo/generator-cheminfo/commit/717a96a))
+
+
+
 ## [4.2.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.1...v4.2.2) (2019-03-27)
 
 
