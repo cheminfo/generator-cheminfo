@@ -58,7 +58,7 @@ module.exports = class extends Generator {
         type: 'confirm',
         name: 'codecov',
         message: 'Do you want to install coverage tool?',
-        default: false
+        default: true
       }
     ];
 
@@ -95,8 +95,8 @@ module.exports = class extends Generator {
     );
     if (includes.notOnlyNode) {
       this.fs.copy(
-        this.templatePath('tsconfig.es6.json'),
-        this.destinationPath('tsconfig.es6.json')
+        this.templatePath('tsconfig.esm.json'),
+        this.destinationPath('tsconfig.esm.json')
       );
     }
     this.fs.copy(
@@ -142,17 +142,17 @@ module.exports = class extends Generator {
   install() {
     let deps = [
       '@types/jest',
+      '@typescript-eslint/eslint-plugin',
+      '@typescript-eslint/parser',
       'eslint',
       'eslint-config-cheminfo',
       'eslint-config-cheminfo-typescript',
       'eslint-plugin-import',
       'eslint-plugin-jest',
-      'eslint-plugin-typescript',
       'jest',
       'rimraf',
       'ts-jest',
-      'typescript',
-      'typescript-eslint-parser'
+      'typescript'
     ];
 
     this.npmInstall(deps, { 'save-dev': true });

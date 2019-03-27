@@ -3,27 +3,26 @@
   "version": "0.0.0",
   "description": "<%= description %>",
   "main": "./lib/index.js",<% if (notOnlyNode) { %>
-  "module": "./lib-es6/index.js",<% } %>
+  "module": "./lib-esm/index.js",<% } %>
   "types": "./lib/index.d.ts",
   "keywords": [],
   "author": "<%= userName %>",
   "license": "MIT",
   "files": [
     "lib"<% if (notOnlyNode) { %>,
-    "lib-es6"<% } %>
+    "lib-esm"<% } %>
   ],
   "scripts": {
-    "clean": "rimraf lib<% if (notOnlyNode) { %> lib-es6<% } %>",
+    "clean": "rimraf lib<% if (notOnlyNode) { %> lib-esm<% } %>",
     "eslint": "eslint src --ext ts --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "npm run tsc",
-    "test": "npm run test-only && npm run eslint",
+    "test": "npm run test-coverage && npm run eslint",
+    "test-coverage": "npm run test-only --coverage",
     "test-only": "jest",
-    "test-coverage": "npm run test-only --coverage",<% if (codecov) { %>
-    "test-travis": "npm run test-coverage && npm run eslint",<% } %>
-    "tsc": "npm run clean && npm run tsc-es5<% if (notOnlyNode) { %> && npm run tsc-es6<% } %>",
-    "tsc-es5": "tsc"<% if (notOnlyNode) { %>,
-    "tsc-es6": "tsc --project tsconfig.es6.json"<% } %>
+    "tsc": "npm run clean && npm run tsc-cjs<% if (notOnlyNode) { %> && npm run tsc-esm<% } %>",
+    "tsc-cjs": "tsc"<% if (notOnlyNode) { %>,
+    "tsc-esm": "tsc --project tsconfig.esm.json"<% } %>
   },
   "repository": {
     "type": "git",
@@ -34,18 +33,7 @@
   },
   "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
   "jest": {
-    "testEnvironment": "node",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }
