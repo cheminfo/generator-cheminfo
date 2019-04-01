@@ -9,6 +9,7 @@
   "author": "<%= userName %>",
   "license": "MIT",
   "files": [
+    "src",
     "lib"<% if (notOnlyNode) { %>,
     "lib-esm"<% } %>
   ],
