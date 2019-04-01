@@ -1,3 +1,12 @@
+## [4.2.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.3...v4.2.4) (2019-04-01)
+
+
+### Bug Fixes
+
+* **typescript:** include src in package ([6e17c61](https://github.com/cheminfo/generator-cheminfo/commit/6e17c61))
+
+
+
 ## [4.2.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.2...v4.2.3) (2019-03-27)
 
 
