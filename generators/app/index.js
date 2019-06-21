@@ -77,7 +77,7 @@ module.exports = class extends Generator {
     });
 
     return this.prompt(prompts).then(
-      function (props) {
+      function(props) {
         // To access props later use this.props.name;
         this.props = props;
       }.bind(this)
@@ -123,6 +123,10 @@ module.exports = class extends Generator {
       this.templatePath('test'),
       this.destinationPath('src/__tests__/test.js'),
       includes
+    );
+    this.fs.copy(
+      this.templatePath('npmignore'),
+      this.destinationPath('src/.npmignore')
     );
     if (this.props.runkit) {
       this.fs.copyTpl(
@@ -171,6 +175,6 @@ module.exports = class extends Generator {
       deps.push('cheminfo-tools');
     }
 
-    this.npmInstall(deps, {'save-dev': true});
+    this.npmInstall(deps, { 'save-dev': true });
   }
 };

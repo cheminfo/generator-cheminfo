@@ -88,6 +88,10 @@ module.exports = class extends Generator {
       this.templatePath('test.js'),
       this.destinationPath('src/__tests__/test.js')
     );
+    this.fs.copy(
+      this.templatePath('npmignore'),
+      this.destinationPath('src/.npmignore')
+    );
 
     this.fs.copyTpl(
       this.templatePath('LICENSE'),

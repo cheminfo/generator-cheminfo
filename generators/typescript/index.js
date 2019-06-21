@@ -111,6 +111,10 @@ module.exports = class extends Generator {
       this.templatePath('test.ts'),
       this.destinationPath('src/__tests__/test.ts')
     );
+    this.fs.copy(
+      this.templatePath('npmignore'),
+      this.destinationPath('src/.npmignore')
+    );
 
     this.fs.copyTpl(
       this.templatePath('gitignore'),
