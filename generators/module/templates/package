@@ -12,7 +12,7 @@
     "eslint": "eslint src",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "rollup -c",
-    "test": "run-s test-only eslint",<% if (codecov) { %>
+    "test": "npm run test-only && npm run eslint",<% if (codecov) { %>
     "test-travis": "eslint src && jest --coverage && codecov",<% } %>
     "test-only": "jest"
   },

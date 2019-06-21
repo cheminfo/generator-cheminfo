@@ -52,25 +52,12 @@ module.exports = class extends Generator {
         message: 'Your package description',
       },
       {
-        type: 'input',
-        name: 'version',
-        message: 'Your package version',
-        default: '0.0.1',
-      },
-      {
         type: 'confirm',
         name: 'codecov',
         message: 'Do you want to install coverage tool?',
         default: true,
       },
     ];
-
-    prompts.push({
-      type: 'confirm',
-      name: 'install',
-      message: 'Run NPM install?',
-      default: 'true',
-    });
 
     return this.prompt(prompts).then(
       function(props) {
@@ -92,7 +79,6 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      version: this.props.version,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
@@ -153,14 +139,10 @@ module.exports = class extends Generator {
       'eslint-plugin-import',
       'eslint-plugin-jest',
       'jest',
-      'npm-run-all',
     ];
 
     if (this.props.codecov) {
       deps.push('codecov');
-    }
-    if (this.props.org === 'cheminfo-js') {
-      deps.push('cheminfo-tools');
     }
 
     this.npmInstall(deps, { 'save-dev': true });
