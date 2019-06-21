@@ -1,3 +1,18 @@
+# [4.3.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.4...v4.3.0) (2019-06-21)
+
+
+### Bug Fixes
+
+* update Node.js to 12 in travis configs ([62ce5b7](https://github.com/cheminfo/generator-cheminfo/commit/62ce5b7))
+
+
+### Features
+
+* add .npmignore to src directories ([f8fc97c](https://github.com/cheminfo/generator-cheminfo/commit/f8fc97c))
+* add Prettier config ([6ead516](https://github.com/cheminfo/generator-cheminfo/commit/6ead516))
+
+
+
 ## [4.2.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.3...v4.2.4) (2019-04-01)
 
 
