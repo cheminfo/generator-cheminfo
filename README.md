@@ -10,13 +10,14 @@
 First, install [Yeoman](http://yeoman.io) and generator-cheminfo using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
-npm install -g generator-cheminfo
+npm i -g yo generator-cheminfo
 ```
 
-Then generate your new project:
+Then go to a new directory and generate your project:
 
 ```bash
+mkdir my-new-project
+cd my-new-project
 yo cheminfo
 ```
 
@@ -26,34 +27,6 @@ Other available generators are:
 yo cheminfo:lerna-module
 yo cheminfo:module
 yo cheminfo:typescript
-```
-
-## Description
-
-The generator will prompt for the next fields:
-
-- **Your project name**: the package name, without the `ml-` start for ml.js organization
-- **Organization**: choose the desired organization, the supported ones are **ml** and **cheminfo-js**
-- **Your name**: your [NPM name](https://docs.npmjs.com/files/package.json#people-fields-author-contributors)
-- **Your package description**: A description to show in [NPM](https://docs.npmjs.com/files/package.json#description-1)
-- **Do you want to install coverage tool?**: Add the coveralls badge and scripts. The default value is `false`
-- **Run NPM install?**: Run `npm install` after the template generation
-
-When the generator finish there will be the following files:
-
-```
-.
-├── .eslintrc.yml
-├── .gitignore
-├── .travis.yml
-├── History.md
-├── LICENSE
-├── README.md
-├── package.json
-└── src
-    ├── index.js
-    └── __test__
-        └── test.js
 ```
 
 ## License

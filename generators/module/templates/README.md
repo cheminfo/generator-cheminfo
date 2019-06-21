@@ -1,15 +1,15 @@
 # <%= name %>
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]<% if (codecov) { %>
-  [![Test coverage][codecov-image]][codecov-url]<% } %>
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]<% if (codecov) { %>
+[![Test coverage][codecov-image]][codecov-url]<% } %>
+[![npm download][download-image]][download-url]
 
 <%= description %>.
 
 ## Installation
 
-`$ npm install --save <%= npmName %>`
+`$ npm i <%= npmName %>`
 
 ## Usage
 
@@ -24,7 +24,7 @@ const result = library(args);
 
 ## License
 
-  [MIT](./LICENSE)
+[MIT](./LICENSE)
 
 [npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/<%= npmName %>

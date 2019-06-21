@@ -9,7 +9,7 @@
 
 ## Installation
 
-`$ npm install --save <%= npmName %>`
+`$ npm i <%= npmName %>`
 
 ## Usage
 

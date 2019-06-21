@@ -10,7 +10,7 @@
 
 ## Installation
 
-`$ npm install <%= name %>`
+`$ npm i <%= name %>`
 
 ## [API Documentation](https://<%= org %>.github.io/<%= name %>/)
 
