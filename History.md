@@ -1,3 +1,13 @@
+## [4.3.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.3.0...v4.3.1) (2019-06-21)
+
+
+### Bug Fixes
+
+* **typescript:** correct index.ts ([5c46e10](https://github.com/cheminfo/generator-cheminfo/commit/5c46e10))
+* **typescript:** correct test.ts ([4432524](https://github.com/cheminfo/generator-cheminfo/commit/4432524))
+
+
+
 # [4.3.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.2.4...v4.3.0) (2019-06-21)
 
 
