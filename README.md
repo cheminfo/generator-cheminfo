@@ -38,7 +38,6 @@ The generator will prompt for the next fields:
 - **Your package description**: A description to show in [NPM](https://docs.npmjs.com/files/package.json#description-1)
 - **Your package version**: The package version. The default value is `0.0.1`
 - **Do you want to install coverage tool?**: Add the coveralls badge and scripts. The default value is `false`
-- **Do you want to create a Runkit file example?**: Add the example displayed in NPM. The default value is `false`
 - **Run NPM install?**: Run `npm install` after the template generation
 
 When the generator finish there will be the following files:
@@ -52,7 +51,6 @@ When the generator finish there will be the following files:
 ├── LICENSE
 ├── README.md
 ├── package.json
-├── runkit.js
 └── src
     ├── index.js
     └── __test__

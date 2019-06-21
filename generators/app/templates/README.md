@@ -1,11 +1,11 @@
 # <%= name %>
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][travis-image]][travis-url]<% if (codecov) { %>
-  [![Test coverage][codecov-image]][codecov-url]<% } %>
-  [![David deps][david-image]][david-url]
-  [![npm download][download-image]][download-url]
-  
+[![NPM version][npm-image]][npm-url]
+[![build status][travis-image]][travis-url]<% if (codecov) { %>
+[![Test coverage][codecov-image]][codecov-url]<% } %>
+[![David deps][david-image]][david-url]
+[![npm download][download-image]][download-url]
+
 <%= description %>
 
 ## Installation
@@ -19,8 +19,6 @@
 ```js
 const <%= camelName %> = require('<%= name %>');
 ```
-<% if (runkit) { %>
-Or test it in [Runkit](https://runkit.com/npm/<%= name %>)<% } %>
 
 ## License
 
