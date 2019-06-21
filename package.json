@@ -6,6 +6,13 @@
   "files": [
     "generators"
   ],
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
   "keywords": [
     "machine",
     "learning",

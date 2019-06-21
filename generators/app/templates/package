@@ -28,5 +28,12 @@
   "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
   "jest": {
     "testEnvironment": "node"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
   }
 }
