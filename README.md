@@ -1,9 +1,6 @@
 # generator-cheminfo
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][daviddm-image]][daviddm-url]
-[![Coverage percentage][coveralls-image]][coveralls-url]
 [![npm download][download-image]][download-url]
 
 > Generator for the different cheminfo organizations
@@ -68,11 +65,5 @@ When the generator finish there will be the following files:
 
 [npm-image]: https://badge.fury.io/js/generator-cheminfo.svg
 [npm-url]: https://npmjs.org/package/generator-cheminfo
-[travis-image]: https://travis-ci.org/cheminfo/generator-cheminfo.svg?branch=master
-[travis-url]: https://travis-ci.org/cheminfo/generator-cheminfo
-[daviddm-image]: https://david-dm.org/cheminfo/generator-cheminfo.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/cheminfo/generator-cheminfo
-[coveralls-image]: https://coveralls.io/repos/github/cheminfo/generator-cheminfo/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/cheminfo/generator-cheminfo?branch=master
 [download-image]: https://img.shields.io/npm/dm/generator-cheminfo.svg?style=flat-square
 [download-url]: https://npmjs.org/package/generator-cheminfo
