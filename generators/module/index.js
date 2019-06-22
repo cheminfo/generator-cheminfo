@@ -138,7 +138,7 @@ module.exports = class extends Generator {
 
   install() {
     let deps = [
-      'babel-plugin-transform-es2015-modules-commonjs',
+      '@babel/plugin-transform-modules-commonjs',
       'eslint',
       'eslint-config-cheminfo',
       'eslint-plugin-import',
