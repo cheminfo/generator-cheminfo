@@ -1,3 +1,18 @@
+# [4.4.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.3.1...v4.4.0) (2019-06-30)
+
+
+### Bug Fixes
+
+* always enable coverage ([e8d60d8](https://github.com/cheminfo/generator-cheminfo/commit/e8d60d8))
+* use babel.config.js ([42104fb](https://github.com/cheminfo/generator-cheminfo/commit/42104fb)), closes [#19](https://github.com/cheminfo/generator-cheminfo/issues/19)
+
+
+### Features
+
+* add .npmrc to disable package-lock.json ([3f5ddce](https://github.com/cheminfo/generator-cheminfo/commit/3f5ddce))
+
+
+
 ## [4.3.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.3.0...v4.3.1) (2019-06-21)
 
 
