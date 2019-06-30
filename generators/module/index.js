@@ -86,8 +86,8 @@ module.exports = class extends Generator {
     };
 
     this.fs.copy(
-      this.templatePath('babelrc'),
-      this.destinationPath('.babelrc'),
+      this.templatePath('babel.config.js'),
+      this.destinationPath('babel.config.js'),
     );
     this.fs.copy(
       this.templatePath('eslintrc.yml'),
