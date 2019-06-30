@@ -51,12 +51,6 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Your package description',
       },
-      {
-        type: 'confirm',
-        name: 'codecov',
-        message: 'Do you want to install coverage tool?',
-        default: true,
-      },
     ];
 
     return this.prompt(prompts).then(
@@ -83,7 +77,6 @@ module.exports = class extends Generator {
       date: year + '-' + month + '-' + day,
       year: year,
       camelName: camelName,
-      codecov: this.props.codecov,
     };
 
     this.fs.copy(
@@ -141,10 +134,6 @@ module.exports = class extends Generator {
       'eslint-plugin-jest',
       'jest',
     ];
-
-    if (this.props.codecov) {
-      deps.push('codecov');
-    }
 
     this.npmInstall(deps, { 'save-dev': true });
   }

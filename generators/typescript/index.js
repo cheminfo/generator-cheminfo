@@ -56,12 +56,6 @@ module.exports = class extends Generator {
         message: 'Is it a Node.js-only library?',
         default: false,
       },
-      {
-        type: 'confirm',
-        name: 'codecov',
-        message: 'Do you want to install coverage tool?',
-        default: true,
-      },
     ];
 
     return this.prompt(prompts).then(
@@ -85,7 +79,6 @@ module.exports = class extends Generator {
       org: this.props.org,
       userName: this.props.userName,
       notOnlyNode: !this.props.node,
-      codecov: this.props.codecov,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,

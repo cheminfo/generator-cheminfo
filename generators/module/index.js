@@ -50,12 +50,6 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Your package description',
       },
-      {
-        type: 'confirm',
-        name: 'codecov',
-        message: 'Do you want to install coverage tool?',
-        default: false,
-      },
     ];
 
     return this.prompt(prompts).then(
@@ -78,7 +72,6 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      codecov: this.props.codecov,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
@@ -146,10 +139,6 @@ module.exports = class extends Generator {
       'jest',
       'rollup',
     ];
-
-    if (this.props.codecov) {
-      deps.push('codecov');
-    }
 
     this.npmInstall(deps, { 'save-dev': true });
   }
