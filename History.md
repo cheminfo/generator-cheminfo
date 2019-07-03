@@ -1,3 +1,12 @@
+## [4.4.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.0...v4.4.1) (2019-07-03)
+
+
+### Bug Fixes
+
+* use travis-ci.com urls ([1428672](https://github.com/cheminfo/generator-cheminfo/commit/1428672))
+
+
+
 # [4.4.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.3.1...v4.4.0) (2019-06-30)
 
 
