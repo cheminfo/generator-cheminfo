@@ -132,7 +132,9 @@ module.exports = class extends Generator {
       'eslint-config-cheminfo',
       'eslint-plugin-import',
       'eslint-plugin-jest',
+      'eslint-plugin-prettier',
       'jest',
+      'prettier',
     ];
 
     this.npmInstall(deps, { 'save-dev': true });
