@@ -1,3 +1,12 @@
+## [4.4.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.1...v4.4.2) (2019-08-30)
+
+
+### Bug Fixes
+
+* add missing eslint config peer deps ([acd734a](https://github.com/cheminfo/generator-cheminfo/commit/acd734a))
+
+
+
 ## [4.4.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.0...v4.4.1) (2019-07-03)
 
 
