@@ -1,3 +1,12 @@
+## [4.4.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.2...v4.4.3) (2019-09-24)
+
+
+### Bug Fixes
+
+* make tsconfig compatible with ESLint plugin ([dc2f6cd](https://github.com/cheminfo/generator-cheminfo/commit/dc2f6cd))
+
+
+
 ## [4.4.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.1...v4.4.2) (2019-08-30)
 
 
