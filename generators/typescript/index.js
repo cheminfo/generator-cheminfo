@@ -88,6 +88,10 @@ module.exports = class extends Generator {
       this.templatePath('tsconfig.json'),
       this.destinationPath('tsconfig.json'),
     );
+    this.fs.copy(
+      this.templatePath('tsconfig.cjs.json'),
+      this.destinationPath('tsconfig.cjs.json'),
+    );
     if (includes.notOnlyNode) {
       this.fs.copy(
         this.templatePath('tsconfig.esm.json'),
