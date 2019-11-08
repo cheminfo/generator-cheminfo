@@ -1,3 +1,12 @@
+# [4.5.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.4...v4.5.0) (2019-11-08)
+
+
+### Features
+
+* replace Travis CI with GitHub actions ([136346b](https://github.com/cheminfo/generator-cheminfo/commit/136346b3e382284464661bee2e6b573bb286c392))
+
+
+
 ## [4.4.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.3...v4.4.4) (2019-10-22)
 
 
