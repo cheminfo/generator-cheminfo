@@ -123,8 +123,8 @@ module.exports = class extends Generator {
       includes,
     );
     this.fs.copyTpl(
-      this.templatePath('travis.yml'),
-      this.destinationPath('.travis.yml'),
+      this.templatePath('nodejs.yml'),
+      this.destinationPath('.github/workflows/nodejs.yml'),
       includes,
     );
   }

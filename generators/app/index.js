@@ -104,8 +104,8 @@ module.exports = class extends Generator {
     );
     this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
     this.fs.copyTpl(
-      this.templatePath('travis.yml'),
-      this.destinationPath('.travis.yml'),
+      this.templatePath('nodejs.yml'),
+      this.destinationPath('.github/workflows/nodejs.yml'),
       includes,
     );
 

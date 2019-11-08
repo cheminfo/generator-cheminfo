@@ -1,8 +1,7 @@
 # <%= name %>
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
+[![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
 
 <%= description %>.
@@ -26,11 +25,9 @@ const result = library(args);
 
 [MIT](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/<%= npmName %>.svg
 [npm-url]: https://www.npmjs.com/package/<%= npmName %>
-[travis-image]: https://img.shields.io/com/travis/<%= org %>/<%= name %>/master.svg?style=flat-square
-[travis-url]: https://travis-ci.com/<%= org %>/<%= name %>
-[codecov-image]: https://img.shields.io/codecov/c/github/<%= org %>/<%= name %>.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/<%= org %>/<%= name %>
-[download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg?style=flat-square
+[ci-image]: https://github.com/<%= org %>/<%= name %>/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-url]: https://github.com/<%= org %>/<%= name %>/actions?query=workflow%3A%22Node.js+CI%22
+[download-image]: https://img.shields.io/npm/dm/<%= npmName %>.svg
 [download-url]: https://www.npmjs.com/package/<%= npmName %>

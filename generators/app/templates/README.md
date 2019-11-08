@@ -1,9 +1,7 @@
 # <%= name %>
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
+[![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
 
 <%= description %>
@@ -24,13 +22,9 @@ const <%= camelName %> = require('<%= name %>');
 
 [MIT](./LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/<%= name %>.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/<%= name %>.svg
 [npm-url]: https://www.npmjs.com/package/<%= name %>
-[travis-image]: https://img.shields.io/travis/com/<%= org %>/<%= name %>/master.svg?style=flat-square
-[travis-url]: https://travis-ci.com/<%= org %>/<%= name %>
-[codecov-image]: https://img.shields.io/codecov/c/github/<%= org %>/<%= name %>.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/<%= org %>/<%= name %>
-[david-image]: https://img.shields.io/david/<%= org %>/<%= name %>.svg?style=flat-square
-[david-url]: https://david-dm.org/<%= org %>/<%= name %>
-[download-image]: https://img.shields.io/npm/dm/<%= name %>.svg?style=flat-square
+[ci-image]: https://github.com/<%= org %>/<%= name %>/workflows/Node.js%20CI/badge.svg?branch=master
+[ci-url]: https://github.com/<%= org %>/<%= name %>/actions?query=workflow%3A%22Node.js+CI%22
+[download-image]: https://img.shields.io/npm/dm/<%= name %>.svg
 [download-url]: https://www.npmjs.com/package/<%= name %>
