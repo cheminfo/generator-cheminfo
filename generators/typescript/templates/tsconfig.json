@@ -2,9 +2,9 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "strict": true,
-    "target": "esnext"
+    "target": "es2019"
   },
   "include": ["./src/**/*"]
 }
