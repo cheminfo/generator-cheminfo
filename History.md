@@ -1,3 +1,12 @@
+## [4.5.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.5.0...v4.5.1) (2019-12-03)
+
+
+### Bug Fixes
+
+* **typescript:** use inline source maps and target es2019 ([a4100c6](https://github.com/cheminfo/generator-cheminfo/commit/a4100c648830f46afbbc1af7b6dea681bf7f7c55))
+
+
+
 # [4.5.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.4.4...v4.5.0) (2019-11-08)
 
 
