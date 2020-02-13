@@ -6,6 +6,7 @@
 - Install the following plugins in VScode:
   - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+  - [jsdoc](https://marketplace.visualstudio.com/items?itemName=stevencl.addDocComments) to automatically add the documentation comments (highlight function declaration, `CTRL+SHIFT+P`, `>Add Doc Comment`)
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - turn on auto-formatting on save (`CTRL,`, then search for save)
