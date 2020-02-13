@@ -34,6 +34,7 @@ to turn on the watch mode and automatically re-run tests.
 ### Notes
 
 - Avoid the use of snapshots for tests
+- Name test files as `{modulename}.test.js`, e.g. `index.test.js`
 
 ## General development notes
 
