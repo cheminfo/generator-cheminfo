@@ -30,6 +30,10 @@ npx jest --watch
 
 to turn on the watch mode and automatically re-run tests.
 
+## Learning javascript
+
+Please check this excellent tutorial: https://github.com/getify/You-Dont-Know-JS
+
 ### Notes
 
 - Avoid the use of snapshots for tests
