@@ -18,10 +18,10 @@ Then go to a new directory and generate your project:
 ```bash
 mkdir my-new-project
 cd my-new-project
-yo cheminfo
+yo cheminfo:module
 ```
 
-Other available generators are:
+The following generators are available:
 
 ```bash
 yo cheminfo:lerna-module
