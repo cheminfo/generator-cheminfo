@@ -1,6 +1,6 @@
 {
   "name": "generator-cheminfo",
-  "version": "4.6.0",
+  "version": "4.6.1",
   "description": "Generator for the different cheminfo organizations",
   "author": "Miguel Asencio <maasencioh@gmail.com>",
   "files": [
