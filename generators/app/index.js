@@ -1,12 +1,8 @@
 'use strict';
 
 const cp = require('child_process');
-const path = require('path');
 
-const camelCase = require('camelcase');
-const chalk = require('chalk');
 const Generator = require('yeoman-generator');
-const yosay = require('yosay');
 
 let username = ' ';
 
@@ -19,13 +15,6 @@ try {
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(
-      yosay(
-        `Behold the almighty ${chalk.red('generator-cheminfo')} generator!`,
-      ),
-    );
-
     this.log('The following generators are available:');
     this.log('- yo cheminfo:module');
     this.log('- yo cheminfo:typescript');
