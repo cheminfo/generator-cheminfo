@@ -1,3 +1,7 @@
+## [4.6.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.1...v4.6.2) (2020-04-13)
+
+
+
 ## [4.6.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.0...v4.6.1) (2020-04-08)
 
 
