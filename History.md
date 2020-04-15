@@ -1,3 +1,12 @@
+# [4.7.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.2...v4.7.0) (2020-04-15)
+
+
+### Features
+
+* add back Codecov ([52d1ba0](https://github.com/cheminfo/generator-cheminfo/commit/52d1ba0e90e68398dc4de8f1698c31b4bac5e152))
+
+
+
 ## [4.6.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.1...v4.6.2) (2020-04-13)
 
 
