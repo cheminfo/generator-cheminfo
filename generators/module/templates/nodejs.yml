@@ -14,8 +14,6 @@ jobs:
         run: |
           npm install
           npm run eslint
-        env:
-          CI: true
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -31,7 +29,5 @@ jobs:
         run: |
           npm install
           npm run test-coverage
-        env:
-          CI: true
       - name: Send coverage report to Codecov
         uses: codecov/codecov-action@v1
