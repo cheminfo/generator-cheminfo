@@ -1,3 +1,12 @@
+# [4.8.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.2...v4.8.0) (2020-04-30)
+
+
+### Features
+
+* add cheminfo:react-frontend ([0ea5243](https://github.com/cheminfo/generator-cheminfo/commit/0ea52434c7b8b1eed3c4bca58f1d2d85a461231d))
+
+
+
 ## [4.7.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.1...v4.7.2) (2020-04-25)
 
 
