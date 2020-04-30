@@ -4,9 +4,7 @@ const cp = require('child_process');
 const path = require('path');
 
 const camelCase = require('camelcase');
-const chalk = require('chalk');
 const Generator = require('yeoman-generator');
-const yosay = require('yosay');
 
 let username = ' ';
 
@@ -19,13 +17,6 @@ try {
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    this.log(
-      yosay(
-        `Behold the almighty ${chalk.red('generator-cheminfo')} generator!`,
-      ),
-    );
-
     const prompts = [
       {
         type: 'input',
@@ -53,7 +44,7 @@ module.exports = class extends Generator {
     ];
 
     return this.prompt(prompts).then(
-      function(props) {
+      function (props) {
         // To access props later use this.props.name;
         this.props = props;
       }.bind(this),
