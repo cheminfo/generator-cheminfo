@@ -27,7 +27,12 @@ The following generators are available:
 yo cheminfo:lerna-module
 yo cheminfo:module
 yo cheminfo:typescript
+yo cheminfo:react-frontend
 ```
+
+### react-frontend
+
+Basic project that includes tailwind-css and cheminfo formatting rules.
 
 ## License
 

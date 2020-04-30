@@ -1,9 +1,7 @@
 'use strict';
 
 const cp = require('child_process');
-const path = require('path');
 
-const camelCase = require('camelcase');
 const chalk = require('chalk');
 const Generator = require('yeoman-generator');
 const yosay = require('yosay');
@@ -30,6 +28,7 @@ module.exports = class extends Generator {
     this.log('- yo cheminfo:module');
     this.log('- yo cheminfo:typescript');
     this.log('- yo cheminfo:lerna-modul');
+    this.log('- yo cheminfo:react-frontend');
   }
 
   writing() {}

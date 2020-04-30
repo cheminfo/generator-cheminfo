@@ -1,0 +1,69 @@
+{
+  "name": "<%= npmName %>",
+  "description": "<%= description %>",
+  "version": "0.1.0",
+  "homepage": "./",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<%= org %>/<%= name %>.git"
+  },
+  "keywords": [],
+  "author": "<%= userName %>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/<%= org %>/<%= name %>/issues"
+  },
+  "homepage": "./",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
+    "@testing-library/user-event": "^10.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
+  },
+  "scripts": {
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run build:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "eslint": "eslint src --ext js,jsx",
+    "eslint-fix": "npm run eslint -- --fix",
+    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+  },
+  "eslintConfig": {
+    "extends": "cheminfo-react",
+    "parser": "babel-eslint",
+    "rules": {
+      "import/no-unresolved": "off"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "eslint": "^6.8.0",
+    "eslint-config-cheminfo-react": "^4.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "postcss-cli": "^7.1.0",
+    "prettier": "^2.0.4",
+    "prop-types": "^15.7.2",
+    "tailwindcss": "^1.3.4"
+  }
+}
