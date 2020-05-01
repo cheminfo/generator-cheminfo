@@ -1,3 +1,12 @@
+## [4.8.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.8.0...v4.8.1) (2020-05-01)
+
+
+### Bug Fixes
+
+* add back setup-node to lint job ([6c9379c](https://github.com/cheminfo/generator-cheminfo/commit/6c9379cc8de31a05d042c4083fe8fd47f483b898))
+
+
+
 # [4.8.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.2...v4.8.0) (2020-04-30)
 
 
