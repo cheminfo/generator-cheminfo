@@ -24,6 +24,7 @@ yo cheminfo:module
 The following generators are available:
 
 ```bash
+yo cheminfo:commonjs
 yo cheminfo:lerna-module
 yo cheminfo:module
 yo cheminfo:typescript
