@@ -1,3 +1,12 @@
+# [4.9.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.8.1...v4.9.0) (2020-06-26)
+
+
+### Features
+
+* add new generator commonjs ([6bf6388](https://github.com/cheminfo/generator-cheminfo/commit/6bf6388bba09953010c7c85227729bce595676d4))
+
+
+
 ## [4.8.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.8.0...v4.8.1) (2020-05-01)
 
 
