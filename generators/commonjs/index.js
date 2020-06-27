@@ -39,13 +39,7 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'description',
-        message: 'Your package description',
-      },
-      {
-        type: 'confirm',
-        name: 'node',
-        message: 'Is it a Node.js-only library?',
-        default: false,
+        message: 'Your project description',
       },
     ];
 
@@ -69,52 +63,31 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      notOnlyNode: !this.props.node,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
       camelName: camelName,
     };
-    this.fs.copy(
-      this.templatePath('tsconfig.json'),
-      this.destinationPath('tsconfig.json'),
-    );
-    this.fs.copy(
-      this.templatePath('tsconfig.cjs.json'),
-      this.destinationPath('tsconfig.cjs.json'),
-    );
-    if (includes.notOnlyNode) {
-      this.fs.copy(
-        this.templatePath('tsconfig.esm.json'),
-        this.destinationPath('tsconfig.esm.json'),
-      );
-    }
+
     this.fs.copy(
       this.templatePath('eslintrc.yml'),
       this.destinationPath('.eslintrc.yml'),
     );
     this.fs.copy(
-      this.templatePath('index.ts'),
-      this.destinationPath('src/index.ts'),
+      this.templatePath('prettierrc'),
+      this.destinationPath('.prettierrc'),
     );
     this.fs.copy(
-      this.templatePath('test.ts'),
-      this.destinationPath('src/__tests__/test.ts'),
-    );
-    this.fs.copy(
-      this.templatePath('npmignore'),
-      this.destinationPath('src/.npmignore'),
-    );
-    this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
-    this.fs.copyTpl(
       this.templatePath('gitignore'),
       this.destinationPath('.gitignore'),
-      includes,
     );
-    this.fs.copyTpl(
-      this.templatePath('LICENSE'),
-      this.destinationPath('LICENSE'),
-      includes,
+    this.fs.copy(
+      this.templatePath('index.js'),
+      this.destinationPath('src/index.js'),
+    );
+    this.fs.copy(
+      this.templatePath('test.js'),
+      this.destinationPath('src/__tests__/test.js'),
     );
     this.fs.copyTpl(
       this.templatePath('README.md'),
@@ -122,13 +95,8 @@ module.exports = class extends Generator {
       includes,
     );
     this.fs.copyTpl(
-      this.templatePath('package'),
+      this.templatePath('package.json'),
       this.destinationPath('package.json'),
-      includes,
-    );
-    this.fs.copyTpl(
-      this.templatePath('nodejs.yml'),
-      this.destinationPath('.github/workflows/nodejs.yml'),
       includes,
     );
   }
@@ -136,19 +104,13 @@ module.exports = class extends Generator {
   install() {
     let deps = [
       '@types/jest',
-      '@typescript-eslint/eslint-plugin',
-      '@typescript-eslint/parser',
       'eslint',
       'eslint-config-cheminfo',
-      'eslint-config-cheminfo-typescript',
       'eslint-plugin-import',
       'eslint-plugin-jest',
       'eslint-plugin-prettier',
       'jest',
       'prettier',
-      'rimraf',
-      'ts-jest',
-      'typescript',
     ];
 
     this.npmInstall(deps, { 'save-dev': true });

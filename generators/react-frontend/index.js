@@ -4,7 +4,9 @@ const cp = require('child_process');
 const path = require('path');
 
 const camelCase = require('camelcase');
+const chalk = require('chalk');
 const Generator = require('yeoman-generator');
+const yosay = require('yosay');
 
 let username = ' ';
 
@@ -17,6 +19,13 @@ try {
 
 module.exports = class extends Generator {
   prompting() {
+    // Have Yeoman greet the user.
+    this.log(
+      yosay(
+        `Behold the almighty ${chalk.red('generator-cheminfo')} generator!`,
+      ),
+    );
+
     const prompts = [
       {
         type: 'input',
@@ -41,12 +50,6 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Your package description',
       },
-      {
-        type: 'confirm',
-        name: 'node',
-        message: 'Is it a Node.js-only library?',
-        default: false,
-      },
     ];
 
     return this.prompt(prompts).then(
@@ -69,47 +72,74 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      notOnlyNode: !this.props.node,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
       camelName: camelName,
     };
+
     this.fs.copy(
-      this.templatePath('tsconfig.json'),
-      this.destinationPath('tsconfig.json'),
-    );
-    this.fs.copy(
-      this.templatePath('tsconfig.cjs.json'),
-      this.destinationPath('tsconfig.cjs.json'),
-    );
-    if (includes.notOnlyNode) {
-      this.fs.copy(
-        this.templatePath('tsconfig.esm.json'),
-        this.destinationPath('tsconfig.esm.json'),
-      );
-    }
-    this.fs.copy(
-      this.templatePath('eslintrc.yml'),
-      this.destinationPath('.eslintrc.yml'),
-    );
-    this.fs.copy(
-      this.templatePath('index.ts'),
-      this.destinationPath('src/index.ts'),
-    );
-    this.fs.copy(
-      this.templatePath('test.ts'),
-      this.destinationPath('src/__tests__/test.ts'),
-    );
-    this.fs.copy(
-      this.templatePath('npmignore'),
-      this.destinationPath('src/.npmignore'),
-    );
-    this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
-    this.fs.copyTpl(
       this.templatePath('gitignore'),
       this.destinationPath('.gitignore'),
-      includes,
+    );
+    this.fs.copy(
+      this.templatePath('prettierrc'),
+      this.destinationPath('.prettierrc'),
+    );
+    // tailwind related
+    this.fs.copy(
+      this.templatePath('postcss.config.js'),
+      this.destinationPath('postcss.config.js'),
+    );
+    this.fs.copy(
+      this.templatePath('tailwind.js'),
+      this.destinationPath('tailwind.js'),
+    );
+    this.fs.copy(
+      this.templatePath('tailwind.config.js'),
+      this.destinationPath('tailwind.config.js'),
+    );
+    // public
+    this.fs.copy(
+      this.templatePath('public/index.html'),
+      this.destinationPath('public/index.html'),
+    );
+    this.fs.copy(
+      this.templatePath('public/favicon.ico'),
+      this.destinationPath('public/favicon.ico'),
+    );
+    this.fs.copy(
+      this.templatePath('public/logo192.png'),
+      this.destinationPath('public/logo192.png'),
+    );
+    this.fs.copy(
+      this.templatePath('public/logo512.png'),
+      this.destinationPath('public/logo512.png'),
+    );
+    this.fs.copy(
+      this.templatePath('public/manifest.json'),
+      this.destinationPath('public/manifest.json'),
+    );
+    this.fs.copy(
+      this.templatePath('public/robots.txt'),
+      this.destinationPath('public/robots.txt'),
+    );
+    // src
+    this.fs.copy(
+      this.templatePath('src/index.js'),
+      this.destinationPath('src/index.js'),
+    );
+    this.fs.copy(
+      this.templatePath('src/App.js'),
+      this.destinationPath('src/App.js'),
+    );
+    this.fs.copy(
+      this.templatePath('src/App.test.js'),
+      this.destinationPath('src/__tests__/App.test.js'),
+    );
+    this.fs.copy(
+      this.templatePath('src/assets/tailwind.css'),
+      this.destinationPath('src/assets/tailwind.css'),
     );
     this.fs.copyTpl(
       this.templatePath('LICENSE'),
@@ -126,29 +156,30 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       includes,
     );
-    this.fs.copyTpl(
-      this.templatePath('nodejs.yml'),
-      this.destinationPath('.github/workflows/nodejs.yml'),
-      includes,
-    );
   }
 
   install() {
     let deps = [
-      '@types/jest',
-      '@typescript-eslint/eslint-plugin',
-      '@typescript-eslint/parser',
+      // dependencies
+      '@testing-library/jest-dom',
+      '@testing-library/react',
+      '@testing-library/user-event',
+      'react',
+      'react-dom',
+      'react-scripts',
+      // dev dependencies
+      'autoprefixer',
       'eslint',
-      'eslint-config-cheminfo',
-      'eslint-config-cheminfo-typescript',
+      'eslint-config-cheminfo-react',
       'eslint-plugin-import',
       'eslint-plugin-jest',
       'eslint-plugin-prettier',
-      'jest',
+      'eslint-plugin-react',
+      'eslint-plugin-react-hooks',
+      'postcss-cli',
       'prettier',
-      'rimraf',
-      'ts-jest',
-      'typescript',
+      'prop-types',
+      'tailwindcss',
     ];
 
     this.npmInstall(deps, { 'save-dev': true });

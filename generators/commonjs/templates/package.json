@@ -2,17 +2,21 @@
   "name": "<%= npmName %>",
   "version": "0.0.0",
   "description": "<%= description %>",
-  "main": "src/index.js",
-  "files": [
-    "lib",
-    "src"
-  ],
+  "private": true,
+  "dependencies": {},
   "scripts": {
-    "eslint": "eslint src",
+    "eslint": "eslint src --ext js,jsx",
     "eslint-fix": "npm run eslint -- --fix",
     "test": "npm run test-coverage && npm run eslint",
     "test-coverage": "jest --coverage",
     "test-only": "jest"
+  },
+  "eslintConfig": {
+    "extends": "cheminfo-react",
+    "parser": "babel-eslint",
+    "rules": {
+      "import/no-unresolved": "off"
+    }
   },
   "repository": {
     "type": "git",
@@ -27,12 +31,5 @@
   "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
   "jest": {
     "testEnvironment": "node"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
   }
 }

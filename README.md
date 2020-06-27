@@ -18,16 +18,22 @@ Then go to a new directory and generate your project:
 ```bash
 mkdir my-new-project
 cd my-new-project
-yo cheminfo
+yo cheminfo:module
 ```
 
-Other available generators are:
+The following generators are available:
 
 ```bash
+yo cheminfo:commonjs
 yo cheminfo:lerna-module
 yo cheminfo:module
 yo cheminfo:typescript
+yo cheminfo:react-frontend
 ```
+
+### react-frontend
+
+Basic project that includes tailwind-css and cheminfo formatting rules.
 
 ## License
 

@@ -1,3 +1,65 @@
+# [4.9.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.8.1...v4.9.0) (2020-06-26)
+
+
+### Features
+
+* add new generator commonjs ([6bf6388](https://github.com/cheminfo/generator-cheminfo/commit/6bf6388bba09953010c7c85227729bce595676d4))
+
+
+
+## [4.8.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.8.0...v4.8.1) (2020-05-01)
+
+
+### Bug Fixes
+
+* add back setup-node to lint job ([6c9379c](https://github.com/cheminfo/generator-cheminfo/commit/6c9379cc8de31a05d042c4083fe8fd47f483b898))
+
+
+
+# [4.8.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.2...v4.8.0) (2020-04-30)
+
+
+### Features
+
+* add cheminfo:react-frontend ([0ea5243](https://github.com/cheminfo/generator-cheminfo/commit/0ea52434c7b8b1eed3c4bca58f1d2d85a461231d))
+
+
+
+## [4.7.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.1...v4.7.2) (2020-04-25)
+
+
+
+## [4.7.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.7.0...v4.7.1) (2020-04-16)
+
+
+
+# [4.7.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.2...v4.7.0) (2020-04-15)
+
+
+### Features
+
+* add back Codecov ([52d1ba0](https://github.com/cheminfo/generator-cheminfo/commit/52d1ba0e90e68398dc4de8f1698c31b4bac5e152))
+
+
+
+## [4.6.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.1...v4.6.2) (2020-04-13)
+
+
+
+## [4.6.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.6.0...v4.6.1) (2020-04-08)
+
+
+
+# [4.6.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.5.2...v4.6.0) (2020-02-27)
+
+
+### Features
+
+* add @types/jest ([#24](https://github.com/cheminfo/generator-cheminfo/issues/24)) ([ba63e13](https://github.com/cheminfo/generator-cheminfo/commit/ba63e13d0b3e5e409545549f3e8d18ec5d5fca0b))
+* remove cheminfo generator ([3962a66](https://github.com/cheminfo/generator-cheminfo/commit/3962a66a8ab5887f6477ebc5eef9d7781b76f074))
+
+
+
 ## [4.5.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.5.1...v4.5.2) (2020-01-07)
 
 
