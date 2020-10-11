@@ -1,3 +1,11 @@
+### [4.9.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.9.1...v4.9.2) (2020-10-11)
+
+
+### Bug Fixes
+
+* do not install eslint plugins ([4831f28](https://github.com/cheminfo/generator-cheminfo/commit/4831f288533efa20ab82a5f68a38695b7497cecc))
+* remove workflows from templates ([614f01f](https://github.com/cheminfo/generator-cheminfo/commit/614f01f77912f6b5b0168018361f0c13c56f0727))
+
 ## [4.9.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.9.0...v4.9.1) (2020-09-16)
 
 
