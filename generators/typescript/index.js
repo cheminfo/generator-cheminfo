@@ -136,14 +136,8 @@ module.exports = class extends Generator {
   install() {
     let deps = [
       '@types/jest',
-      '@typescript-eslint/eslint-plugin',
-      '@typescript-eslint/parser',
       'eslint',
-      'eslint-config-cheminfo',
       'eslint-config-cheminfo-typescript',
-      'eslint-plugin-import',
-      'eslint-plugin-jest',
-      'eslint-plugin-prettier',
       'jest',
       'prettier',
       'rimraf',
