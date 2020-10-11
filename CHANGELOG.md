@@ -1,3 +1,5 @@
+# Changelog
+
 ### [4.9.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.9.1...v4.9.2) (2020-10-11)
 
 
