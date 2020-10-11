@@ -113,11 +113,6 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       includes,
     );
-    this.fs.copyTpl(
-      this.templatePath('nodejs.yml'),
-      this.destinationPath('.github/workflows/nodejs.yml'),
-      includes,
-    );
   }
 
   install() {
