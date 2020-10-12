@@ -31,6 +31,11 @@ yo cheminfo:typescript
 yo cheminfo:react-frontend
 ```
 
+After creating a project with a generator, you can add GitHub actions workflows
+to it from GitHub's interface. Click on the "Actions" tab and then on "New workflow".
+You will be able to choose a workflow from our templates. It is recommended to
+add the a "Node.js CI" workflow to all new modules.
+
 ### react-frontend
 
 Basic project that includes tailwind-css and cheminfo formatting rules.
