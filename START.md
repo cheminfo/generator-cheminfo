@@ -10,6 +10,7 @@
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - turn on auto-formatting on save (`CTRL,`, then search for save)
 - Install [nvm](https://github.com/nvm-sh/nvm)
+  - `nvm install stable`: install last version of `node`
 - Install [hub](https://hub.github.com/)
 
 ## Directory structure
