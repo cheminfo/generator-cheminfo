@@ -9,6 +9,7 @@
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - turn on auto-formatting on save (`CTRL,`, then search for save)
+  - save on focus change
 - Install [nvm](https://github.com/nvm-sh/nvm)
   - `nvm install stable`: install last version of `node`
 - Install [hub](https://hub.github.com/)
