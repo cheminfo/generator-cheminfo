@@ -24,11 +24,23 @@ This means that if you want to create a new project `ml-graph` in the organizati
 
 ## Create a new project
 
-```
+```bash
 npm install --global yo generator-cheminfo
 
 cd projectName
 yo cheminfo:module
+```
+
+## Create the project on github
+
+If you have `hub` installed and want to create the previous example:
+
+```bash
+git init
+git add * .*
+git commit -m 'My first commit'
+hub create mljs/ml-graph
+git push --set-upstream origin master
 ```
 
 ## Test driven development
