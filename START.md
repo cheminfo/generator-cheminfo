@@ -10,6 +10,17 @@
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - turn on auto-formatting on save (`CTRL,`, then search for save)
 - Install [nvm](https://github.com/nvm-sh/nvm)
+- Install [hub](https://hub.github.com/)
+
+## Directory structure
+
+We like to use the following structure for our projects
+
+`~/git/organization/project`
+
+This means that if you want to create a new project `ml-graph` in the organization `mljs` it should be on your harddisk in the following path
+
+`~/git/mljs/ml-graph`
 
 ## Create a new project
 
