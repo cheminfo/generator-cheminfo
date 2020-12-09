@@ -1,6 +1,6 @@
 {
   "name": "generator-cheminfo",
-  "version": "4.9.0",
+  "version": "4.9.2",
   "description": "Generator for the different cheminfo organizations",
   "author": "Miguel Asencio <maasencioh@gmail.com>",
   "files": [
@@ -22,8 +22,8 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "camelcase": "^6.0.0",
-    "yeoman-generator": "^4.9.0"
+    "camelcase": "^6.1.0",
+    "yeoman-generator": "^4.12.0"
   },
   "repository": {
     "type": "git",

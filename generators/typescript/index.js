@@ -126,24 +126,13 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       includes,
     );
-    this.fs.copyTpl(
-      this.templatePath('nodejs.yml'),
-      this.destinationPath('.github/workflows/nodejs.yml'),
-      includes,
-    );
   }
 
   install() {
     let deps = [
       '@types/jest',
-      '@typescript-eslint/eslint-plugin',
-      '@typescript-eslint/parser',
       'eslint',
-      'eslint-config-cheminfo',
       'eslint-config-cheminfo-typescript',
-      'eslint-plugin-import',
-      'eslint-plugin-jest',
-      'eslint-plugin-prettier',
       'jest',
       'prettier',
       'rimraf',

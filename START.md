@@ -9,15 +9,40 @@
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - turn on auto-formatting on save (`CTRL,`, then search for save)
+  - save on focus change
 - Install [nvm](https://github.com/nvm-sh/nvm)
+  - `nvm install stable`: install last version of `node`
+- Install [hub](https://hub.github.com/)
+
+## Directory structure
+
+We like to use the following structure for our projects
+
+`~/git/organization/project`
+
+This means that if you want to create a new project `ml-graph` in the organization `mljs` it should be on your harddisk in the following path
+
+`~/git/mljs/ml-graph`
 
 ## Create a new project
 
-```
+```bash
 npm install --global yo generator-cheminfo
 
 cd projectName
 yo cheminfo:module
+```
+
+## Create the project on github
+
+If you have `hub` installed and want to create the previous example:
+
+```bash
+git init
+git add * .*
+git commit -m 'My first commit'
+hub create mljs/ml-graph
+git push --set-upstream origin master
 ```
 
 ## Test driven development

@@ -106,9 +106,6 @@ module.exports = class extends Generator {
       '@types/jest',
       'eslint',
       'eslint-config-cheminfo',
-      'eslint-plugin-import',
-      'eslint-plugin-jest',
-      'eslint-plugin-prettier',
       'jest',
       'prettier',
     ];
