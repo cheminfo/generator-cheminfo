@@ -59,6 +59,12 @@ to turn on the watch mode and automatically re-run tests.
 
 Please check this excellent tutorial: https://github.com/getify/You-Dont-Know-JS
 
+## Starting to develop in react
+
+A small video introduction on react: https://www.youtube.com/watch?v=XC60UUsU2Vg
+
+The userguide from react: https://reactjs.org/docs/getting-started.html in which in the main concept you should ignore State and Life Cycle and instead read the hooks chapter.
+
 ### Notes
 
 - Avoid the use of snapshots for tests

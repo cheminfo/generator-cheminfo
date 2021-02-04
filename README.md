@@ -40,12 +40,6 @@ add the a "Node.js CI" workflow to all new modules.
 
 Basic project that includes tailwind-css and cheminfo formatting rules.
 
-## Starting to develop in react
-
-A small video introduction on react: https://www.youtube.com/watch?v=XC60UUsU2Vg
-
-The userguide from react: https://reactjs.org/docs/getting-started.html in which in the main concept you should ignore State and Life Cycle and instead read the hooks chapter.
-
 ## License
 
 [MIT](./LICENSE)
