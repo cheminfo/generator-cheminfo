@@ -1,5 +1,14 @@
 # Changelog
 
+### [4.9.3](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.9.2...v4.9.3) (2021-02-04)
+
+
+### Bug Fixes
+
+* add .DS_Store in npmignore ([b14b27d](https://www.github.com/cheminfo/generator-cheminfo/commit/b14b27df711e733cab3e361f650dc93f316e1252))
+* add info on react developement ([86309a5](https://www.github.com/cheminfo/generator-cheminfo/commit/86309a56c793de4dfd299598657cc69ba1c50b58))
+* React intro readme ([599699f](https://www.github.com/cheminfo/generator-cheminfo/commit/599699fb5c1561890e9141f65eb5671f3f5a9845))
+
 ### [4.9.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.9.1...v4.9.2) (2020-10-11)
 
 
@@ -551,6 +560,3 @@
 
 <a name="1.0.0"></a>
 # 1.0.0 (2016-06-20)
-
-
-
