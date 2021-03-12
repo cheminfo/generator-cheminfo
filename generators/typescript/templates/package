@@ -14,11 +14,12 @@
     "lib-esm"<% } %>
   ],
   "scripts": {
+    "check-types": "tsc --noEmit",
     "clean": "rimraf lib<% if (notOnlyNode) { %> lib-esm<% } %>",
-    "eslint": "eslint src --ext ts --cache",
+    "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "npm run tsc",
-    "test": "npm run test-coverage && npm run eslint",
+    "test": "npm run test-coverage && npm run eslint && npm run check-types",
     "test-coverage": "npm run test-only -- --coverage",
     "test-only": "jest",
     "tsc": "npm run clean && npm run tsc-cjs<% if (notOnlyNode) { %> && npm run tsc-esm<% } %>",
