@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.10.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.0...v4.10.1) (2021-03-12)
+
+
+### Bug Fixes
+
+* rollback yeoman-generator update ([4230a90](https://www.github.com/cheminfo/generator-cheminfo/commit/4230a9093a527ecd316667aa2df8fa2f41d0ed0c))
+
 ## [4.10.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.9.2...v4.10.0) (2021-03-12)
 
 
