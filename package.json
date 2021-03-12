@@ -22,8 +22,8 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "camelcase": "^6.1.0",
-    "yeoman-generator": "^4.12.0"
+    "camelcase": "^6.2.0",
+    "yeoman-generator": "^5.1.0"
   },
   "repository": {
     "type": "git",
