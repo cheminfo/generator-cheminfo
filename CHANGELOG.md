@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.10.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.9.2...v4.10.0) (2021-03-12)
+
+
+### Features
+
+* add check-types script to TS template ([b02ed97](https://www.github.com/cheminfo/generator-cheminfo/commit/b02ed97c4daf43d100d8f6ef0766a119a27d8ba3))
+* enable es2020 modules in ts-esm build ([87b9458](https://www.github.com/cheminfo/generator-cheminfo/commit/87b9458c8955eaf4e62aa3b94748a4924410080e))
+* update gitignore templates ([5850e62](https://www.github.com/cheminfo/generator-cheminfo/commit/5850e622948b3b79a846ce1ea3d8b625c0ce478f))
+
+
+### Bug Fixes
+
+* add .DS_Store in npmignore ([b14b27d](https://www.github.com/cheminfo/generator-cheminfo/commit/b14b27df711e733cab3e361f650dc93f316e1252))
+* add info on react developement ([86309a5](https://www.github.com/cheminfo/generator-cheminfo/commit/86309a56c793de4dfd299598657cc69ba1c50b58))
+* React intro readme ([599699f](https://www.github.com/cheminfo/generator-cheminfo/commit/599699fb5c1561890e9141f65eb5671f3f5a9845))
+
 ### [4.9.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.9.1...v4.9.2) (2020-10-11)
 
 
@@ -551,6 +567,3 @@
 
 <a name="1.0.0"></a>
 # 1.0.0 (2016-06-20)
-
-
-
