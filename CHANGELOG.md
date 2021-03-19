@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.10.2](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.1...v4.10.2) (2021-03-19)
+
+
+### Bug Fixes
+
+* rename master to main ([5e79e68](https://www.github.com/cheminfo/generator-cheminfo/commit/5e79e68b3b197c747b613cdb71535d626ff70a31))
+
 ### [4.10.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.0...v4.10.1) (2021-03-12)
 
 
