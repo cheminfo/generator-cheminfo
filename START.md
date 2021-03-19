@@ -38,11 +38,11 @@ yo cheminfo:module
 If you have `hub` installed and want to create the previous example:
 
 ```bash
-git init
+git init -b main
 git add * .*
 git commit -m 'My first commit'
 hub create mljs/ml-graph
-git push --set-upstream origin master
+git push --set-upstream origin main
 ```
 
 ## Test driven development

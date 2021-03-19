@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/<%= org %>/<%= lernaProject %>/issues"
   },
-  "homepage": "https://github.com/<%= org %>/<%= lernaProject %>/tree/master/packages/<%= name %>#readme",
+  "homepage": "https://github.com/<%= org %>/<%= lernaProject %>/tree/main/packages/<%= name %>#readme",
   "prettier": {
     "arrowParens": "always",
     "semi": true,
