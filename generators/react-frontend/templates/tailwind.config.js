@@ -4,8 +4,5 @@ module.exports = {
   // presets: [
   //   require('@zakodium/tailwind-config'),
   // ],
-  theme: {
-    extend: {},
-  },
   purge: ['./src/**/*.jsx', './src/**/*.js', './public/index.html'],
 };
