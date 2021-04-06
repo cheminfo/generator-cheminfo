@@ -1,6 +1,13 @@
-/* eslint-disable no-undef */
-const tailwindcss = require('tailwindcss');
+'use strict';
+
+const cssnano = require('cssnano')({
+  preset: 'default',
+});
 
 module.exports = {
-  plugins: [tailwindcss('./tailwind.js'), require('autoprefixer')],
+  plugins: [
+    require('tailwindcss')(`./styles/tailwind.config.js`),
+    require('autoprefixer'),
+    ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
+  ],
 };
