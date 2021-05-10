@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.11.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.3...v4.11.0) (2021-05-10)
+
+
+### Features
+
+* add prettier and prettier-write scripts ([a040ac7](https://www.github.com/cheminfo/generator-cheminfo/commit/a040ac715e7aeb5edbca17debe2ad170cfd74d6b))
+
+
+### Bug Fixes
+
+* move prettier config to .prettierrc.json instead of package.json ([c4e4c8d](https://www.github.com/cheminfo/generator-cheminfo/commit/c4e4c8d726e3b9ce06085a31c0baa65ec45b9ff9))
+
 ### [4.10.3](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.2...v4.10.3) (2021-05-10)
 
 
