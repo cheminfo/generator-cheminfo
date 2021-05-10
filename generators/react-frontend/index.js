@@ -74,8 +74,8 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore'),
     );
     this.fs.copy(
-      this.templatePath('prettierrc'),
-      this.destinationPath('.prettierrc'),
+      this.templatePath('prettierrc.json'),
+      this.destinationPath('.prettierrc.json'),
     );
     // tailwind related
     this.fs.copy(
@@ -162,11 +162,6 @@ module.exports = class extends Generator {
       'autoprefixer',
       'eslint',
       'eslint-config-cheminfo-react',
-      'eslint-plugin-import',
-      'eslint-plugin-jest',
-      'eslint-plugin-prettier',
-      'eslint-plugin-react',
-      'eslint-plugin-react-hooks',
       'postcss-cli',
       'prettier',
       'prop-types',

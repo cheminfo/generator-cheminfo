@@ -6,13 +6,6 @@
   "files": [
     "generators"
   ],
-  "prettier": {
-    "arrowParens": "always",
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  },
   "keywords": [
     "machine",
     "learning",
@@ -33,5 +26,8 @@
     "url": "https://github.com/cheminfo/generator-cheminfo/issues"
   },
   "homepage": "https://github.com/cheminfo/generator-cheminfo#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  }
 }

@@ -85,6 +85,10 @@ module.exports = class extends Generator {
       this.templatePath('npmignore'),
       this.destinationPath('src/.npmignore'),
     );
+    this.fs.copy(
+      this.templatePath('prettierrc.json'),
+      this.destinationPath('.prettierrc.json'),
+    );
     this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
     this.fs.copyTpl(
       this.templatePath('LICENSE'),
