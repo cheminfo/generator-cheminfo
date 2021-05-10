@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.10.3](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.2...v4.10.3) (2021-05-10)
+
+
+### Bug Fixes
+
+* use prepack script instead of prepublishOnly ([e37d5eb](https://www.github.com/cheminfo/generator-cheminfo/commit/e37d5eb2ff7adefb365391a49ecd2b6a9f904e8b))
+
 ### [4.10.2](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.1...v4.10.2) (2021-03-19)
 
 
