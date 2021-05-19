@@ -2,6 +2,7 @@
 
 ## Install software
 
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Install [VScode](https://code.visualstudio.com/)
 - Install the following plugins in VScode:
   - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
