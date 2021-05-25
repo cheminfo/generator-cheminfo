@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.11.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.11.0...v4.11.1) (2021-05-25)
+
+
+### Bug Fixes
+
+* comply to ESLint rule in test template ([d054531](https://www.github.com/cheminfo/generator-cheminfo/commit/d054531f425a284346bb6e16498f3b08dc241211))
+
 ## [4.11.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.10.3...v4.11.0) (2021-05-10)
 
 
