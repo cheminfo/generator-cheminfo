@@ -12,7 +12,7 @@
   - save on focus change
 - Install [nvm](https://github.com/nvm-sh/nvm)
   - `nvm install stable`: install last version of `node`
-- Install [hub](https://hub.github.com/)
+- Install [gh](https://github.com/cli/cli)
 
 ## Directory structure
 
@@ -41,7 +41,7 @@ If you have `hub` installed and want to create the previous example:
 git init
 git add * .*
 git commit -m 'My first commit'
-hub create mljs/ml-graph
+gh repo create mljs/ml-graph
 git push --set-upstream origin master
 ```
 
@@ -68,11 +68,12 @@ The userguide from react: https://reactjs.org/docs/getting-started.html in which
 ### Notes
 
 - Avoid the use of snapshots for tests
+- Try to have a large coverage of your code by tests
 
 ## General development notes
 
 - Try to use packages from the [awesome list](https://github.com/cheminfo/awesome).
-- Avoid the use of `var` [to declare variables](https://scotch.io/courses/10-need-to-know-javascript-concepts/declaring-javascript-variables-var-let-and-const). Use `let` and, whereever possible `const` instead.
+- `var` [to declare variables] is forbidden (https://scotch.io/courses/10-need-to-know-javascript-concepts/declaring-javascript-variables-var-let-and-const). Use `let` and, whenever possible `const` instead.
 - [ES6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) are used, wherefore the code needs to be transpiled.
 
 ## Commit messages
@@ -98,6 +99,6 @@ Some relevant types are:
 - `refactor` for refactoring without public API changes
 - `chore` changes to the build process or auxiliary tools and libraries such as documentation generation
 
-Any commit that breaks the public API must contain `BREAKING CHANGE`.
+Any commit that breaks the public API must contain `BREAKING CHANGE` or an exclamation mark after the type like for example `fix!: spelling mistake in method`.
 
 [commitlint](https://commitlint.js.org/#/) can help to stick to these conventions.
