@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
   "jest": {
-    "preset": "ts-jest",
+    "preset": "ts-jest/presets/js-with-ts",
     "testEnvironment": "node"
   }
 }
