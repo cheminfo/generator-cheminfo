@@ -99,7 +99,7 @@
    `npm i -D rimraf`
 3. Delete the `.babelrc` and `rollup.config.js` files.
 4. Uninstall these modules:
-   `npm remove @babel/plugin-transform-modules-commonjs rollup`
+   `npm remove @babel/plugin-transform-modules-commonjs rollup eslint-config-cheminfo`
 5. Add a step with `npm run check-types` to the `lint` job in `.github/workflows/nodejs.yml`
    ![](https://i.imgur.com/bVDUeSI.png)
 
