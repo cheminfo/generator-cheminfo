@@ -111,10 +111,10 @@ Now the project should be ready to effectively rewrite files in TypeScript. Subm
    `npm t`
 2. Create a new branch:
    `git switch -c setup-typescript`
-4. Commit all your changes:
+3. Commit all your changes:
    - `git add .`
    - `git commit -m"refactor: setup project for TypeScript"`
-5. Open a pull request:
+4. Open a pull request:
    `gh pr create`
 
 ## Step 2: use TypeScript to check types in JavaScript
