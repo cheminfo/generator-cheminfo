@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.12.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.11.1...v4.12.0) (2021-10-12)
+
+
+### Features
+
+* add allowJs and declaration maps to typescript template ([a028d52](https://www.github.com/cheminfo/generator-cheminfo/commit/a028d52d1542b2a43223523090aab1d3f54aa64c))
+
 ### [4.11.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.11.0...v4.11.1) (2021-05-25)
 
 
