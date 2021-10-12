@@ -9,9 +9,8 @@
     "eslint-fix": "npm run eslint -- --fix",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "test": "npm run test-coverage && npm run eslint && npm run prettier",
-    "test-coverage": "jest --coverage",
-    "test-only": "jest"
+    "test": "npm run test-only && npm run eslint && npm run prettier",
+    "test-only": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "cheminfo-react",
