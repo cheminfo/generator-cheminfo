@@ -94,6 +94,10 @@ module.exports = class extends Generator {
       this.destinationPath('.eslintrc.yml'),
     );
     this.fs.copy(
+      this.templatePath('jest.config.js'),
+      this.destinationPath('jest.config.js'),
+    );
+    this.fs.copy(
       this.templatePath('index.ts'),
       this.destinationPath('src/index.ts'),
     );

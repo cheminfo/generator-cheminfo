@@ -21,9 +21,8 @@
     "prepack": "npm run tsc",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
-    "test": "npm run test-coverage && npm run eslint && npm run prettier && npm run check-types",
-    "test-coverage": "npm run test-only -- --coverage",
-    "test-only": "jest",
+    "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types",
+    "test-only": "jest --coverage",
     "tsc": "npm run clean && npm run tsc-cjs<% if (notOnlyNode) { %> && npm run tsc-esm<% } %>",
     "tsc-cjs": "tsc --project tsconfig.cjs.json"<% if (notOnlyNode) { %>,
     "tsc-esm": "tsc --project tsconfig.esm.json"<% } %>
@@ -35,9 +34,5 @@
   "bugs": {
     "url": "https://github.com/<%= org %>/<%= name %>/issues"
   },
-  "homepage": "https://github.com/<%= org %>/<%= name %>#readme",
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
-  }
+  "homepage": "https://github.com/<%= org %>/<%= name %>#readme"
 }
