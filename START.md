@@ -9,12 +9,22 @@
   - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
-  - turn on auto-formatting on save (`CTRL,`, then search for save)
   - save on focus change
 - Install [volta](https://docs.volta.sh/guide/getting-started)
   - `volta install node@16`: install last version of `node`
   - `nvm install stable`: install last version of `node`
 - Install [gh](https://github.com/cli/cli)
+
+Search and directly edit the configuration JSON of vscode to turn on auto-formatting on save (`SHIFT + CTRL + P`, then search 'Preferences: Open settings (JSON)' )
+
+```json
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n",
+```
 
 ## Directory structure
 
