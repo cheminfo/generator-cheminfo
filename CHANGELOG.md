@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.12.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.12.0...v4.12.1) (2021-11-04)
+
+
+### Bug Fixes
+
+* add information about autoformat on save ([545a42b](https://www.github.com/cheminfo/generator-cheminfo/commit/545a42b070d9b7d6cada3c0d3161cf22a3a7a6d6))
+
 ## [4.12.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.11.1...v4.12.0) (2021-10-12)
 
 
