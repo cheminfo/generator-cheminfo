@@ -24,6 +24,7 @@ Search and directly edit the configuration JSON of vscode to turn on auto-format
     "source.fixAll.eslint": true
   },
   "files.eol": "\n",
+  "js/ts.implicitProjectConfig.checkJs": true,
 ```
 
 ## Directory structure
