@@ -72,6 +72,13 @@ to turn on the watch mode and automatically re-run tests.
 
 Please check this excellent tutorial: https://github.com/getify/You-Dont-Know-JS
 
+## Documentation
+
+We should try to ducmentation all the functions that we create using jsdoc. Here is an example of it's usage:
+
+https://devhints.io/jsdoc
+
+
 ## Starting to develop in react
 
 A small video introduction on react: https://www.youtube.com/watch?v=XC60UUsU2Vg
