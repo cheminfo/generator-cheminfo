@@ -65,13 +65,13 @@
 
 #### Configure Jest
 
-1. Install `ts-jest` and `@types/jest`:
-   `npm install -D ts-jest @types/jest`
-2. Create (or update) `jest.config.js`, with the following contents:
+1. Install Babel plugins and Jest types:
+   `npm install -D @babel/preset-typescript @babel/plugin-transform-modules-commonjs @types/jest`
+2. Create (or update) `babel.config.js`, with the following contents:
    ```javascript
    module.exports = {
-     preset: 'ts-jest/presets/js-with-ts',
-     testEnvironment: 'node',
+     presets: ['@babel/preset-typescript'],
+     plugins: ['@babel/plugin-transform-modules-commonjs'],
    };
    ```
 
