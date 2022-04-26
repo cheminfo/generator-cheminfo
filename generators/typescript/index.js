@@ -94,8 +94,8 @@ module.exports = class extends Generator {
       this.destinationPath('.eslintrc.yml'),
     );
     this.fs.copy(
-      this.templatePath('jest.config.js'),
-      this.destinationPath('jest.config.js'),
+      this.templatePath('babel.config.js'),
+      this.destinationPath('babel.config.js'),
     );
     this.fs.copy(
       this.templatePath('index.ts'),
@@ -138,13 +138,14 @@ module.exports = class extends Generator {
 
   install() {
     let deps = [
+      '@babel/preset-typescript',
+      '@babel/plugin-transform-modules-commonjs',
       '@types/jest',
       'eslint',
       'eslint-config-cheminfo-typescript',
       'jest',
       'prettier',
       'rimraf',
-      'ts-jest',
       'typescript',
     ];
 
