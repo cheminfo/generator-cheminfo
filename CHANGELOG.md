@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.13.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.12.1...v4.13.0) (2022-04-26)
+
+
+### Features
+
+* add update information ([35c862c](https://www.github.com/cheminfo/generator-cheminfo/commit/35c862c29f76b94d9cb93e23278508284fb8363a))
+* **typescript:** move from ts-jest to babel ([#46](https://www.github.com/cheminfo/generator-cheminfo/issues/46)) ([64ff90a](https://www.github.com/cheminfo/generator-cheminfo/commit/64ff90aa5b9f9215b979c98e3448a434bc2ca334))
+
 ### [4.12.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.12.0...v4.12.1) (2021-11-04)
 
 
