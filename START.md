@@ -11,7 +11,7 @@
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - save on focus change
 - Install [volta](https://docs.volta.sh/guide/getting-started)
-  - `volta install node@16`: install last version of `node`
+  - `volta install node@18`: install last version of `node`
   - `nvm install stable`: install last version of `node`
 - Install [gh](https://github.com/cli/cli)
 
