@@ -6,7 +6,7 @@
 - Install [VScode](https://code.visualstudio.com/)
 - Install the following plugins in VScode:
   - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - save on focus change
