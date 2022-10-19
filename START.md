@@ -72,6 +72,8 @@ to turn on the watch mode and automatically re-run tests.
 
 Please check this excellent tutorial: https://github.com/getify/You-Dont-Know-JS#you-dont-know-js-yet-book-series---2nd-edition
 
+Or enjoy this website: https://roadmap.sh/javascript
+
 ## Learning typescript
 
 https://www.typescriptlang.org/docs/handbook/intro.html 
