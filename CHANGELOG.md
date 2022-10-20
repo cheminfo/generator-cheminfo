@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.13.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.0...v4.13.1) (2022-10-20)
+
+
+### Bug Fixes
+
+* be compatible with rollup v3 ([83a32af](https://github.com/cheminfo/generator-cheminfo/commit/83a32afa01c59c085b0ddeb9d52009674142404d))
+* install node 18 in START ([6deaff0](https://github.com/cheminfo/generator-cheminfo/commit/6deaff01f3b1529068678cd0921dbf3c97b644e7))
+
+
+### Documentation
+
+* add Eslint to recommended vscode plugins ([cf55db5](https://github.com/cheminfo/generator-cheminfo/commit/cf55db5ade9f2229d49f04a42e3c3e93079fd035))
+* add info about roadmap.sh/javascript ([2bf53f5](https://github.com/cheminfo/generator-cheminfo/commit/2bf53f5f8889ba82dcbe58da931d40bf4cc7a34a))
+
 ## [4.13.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.12.1...v4.13.0) (2022-04-26)
 
 
