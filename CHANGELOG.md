@@ -1,5 +1,13 @@
 # Changelog
 
+### [4.13.1](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.13.0...v4.13.1) (2022-10-20)
+
+
+### Bug Fixes
+
+* be compatible with rollup v3 ([83a32af](https://www.github.com/cheminfo/generator-cheminfo/commit/83a32afa01c59c085b0ddeb9d52009674142404d))
+* install node 18 in START ([6deaff0](https://www.github.com/cheminfo/generator-cheminfo/commit/6deaff01f3b1529068678cd0921dbf3c97b644e7))
+
 ## [4.13.0](https://www.github.com/cheminfo/generator-cheminfo/compare/v4.12.1...v4.13.0) (2022-04-26)
 
 
