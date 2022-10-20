@@ -82,8 +82,8 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore'),
     );
     this.fs.copy(
-      this.templatePath('rollup.config.js'),
-      this.destinationPath('rollup.config.js'),
+      this.templatePath('rollup.config.mjs'),
+      this.destinationPath('rollup.config.mjs'),
     );
     this.fs.copy(
       this.templatePath('index.js'),
