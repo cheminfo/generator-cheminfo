@@ -7,6 +7,8 @@
 - Install the following plugins in VScode:
   - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - [VScode styled components](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
+  - [Code spell checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - In VScode use `SHIFT+CTRL+P` to
   - find `Shell Command: Install 'code' command in PATH` (to be able to start code from any folder in the terminal by running `code .`)
   - save on focus change
