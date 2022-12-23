@@ -99,7 +99,7 @@
    `npm i -D rimraf`
 3. Delete the `.babelrc` and `rollup.config.js` files.
 4. Uninstall these modules:
-   `npm remove @babel/plugin-transform-modules-commonjs rollup eslint-config-cheminfo`
+   `npm remove rollup eslint-config-cheminfo`
 5. Replace the contents of the file in `.github/workflows/nodejs.yml` with a copy of our [template](https://github.com/cheminfo/.github/blob/main/workflow-templates/nodejs-ts.yml):
    - Replace `$default-branch` with the name of the default branch in the repository (either `main` or `master`).
    - Make sure the `node-version-matrix` array contains the same values as before.
