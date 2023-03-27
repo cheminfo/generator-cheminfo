@@ -1,1 +1,6 @@
 extends: cheminfo
+parserOptions:
+  sourceType: commonjs
+env:
+  node: true
+  jest: true
