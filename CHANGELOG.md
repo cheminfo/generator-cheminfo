@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.13.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.1...v4.13.2) (2023-03-27)
+
+
+### Bug Fixes
+
+* eslintrc for last version of eslint ([#50](https://github.com/cheminfo/generator-cheminfo/issues/50)) ([d274098](https://github.com/cheminfo/generator-cheminfo/commit/d2740987a8eaba3b765d5c3ac1f9aed10e886e48))
+
+
+### Documentation
+
+* add more plugins to install ([5af7f34](https://github.com/cheminfo/generator-cheminfo/commit/5af7f3496455b54e01404d7641a6f92c9db75142))
+
 ## [4.13.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.0...v4.13.1) (2022-10-20)
 
 
