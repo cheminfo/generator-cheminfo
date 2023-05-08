@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.2...v4.13.3) (2023-05-08)
+
+
+### Bug Fixes
+
+* **ts:** change moduleResolution to node16 ([b6f1729](https://github.com/cheminfo/generator-cheminfo/commit/b6f172995116e36114041dae397dbfc2efd79301))
+
 ## [4.13.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.1...v4.13.2) (2023-03-27)
 
 
