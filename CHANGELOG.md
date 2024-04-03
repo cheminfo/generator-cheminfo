@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.13.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.3...v4.13.4) (2024-04-03)
+
+
+### Bug Fixes
+
+* revert tsconfig to node ([079ce62](https://github.com/cheminfo/generator-cheminfo/commit/079ce62a159d56e8154a556b4f36afd9c90e8403))
+
 ## [4.13.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.2...v4.13.3) (2023-05-08)
 
 
