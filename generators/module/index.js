@@ -74,8 +74,8 @@ module.exports = class extends Generator {
       this.destinationPath('babel.config.js'),
     );
     this.fs.copy(
-      this.templatePath('eslintrc.yml'),
-      this.destinationPath('.eslintrc.yml'),
+      this.templatePath('eslint.config.mjs'),
+      this.destinationPath('eslint.config.mjs'),
     );
     this.fs.copy(
       this.templatePath('gitignore'),
@@ -90,8 +90,8 @@ module.exports = class extends Generator {
       this.destinationPath('src/index.js'),
     );
     this.fs.copy(
-      this.templatePath('test.js'),
-      this.destinationPath('src/__tests__/test.js'),
+      this.templatePath('test/index.test.js'),
+      this.destinationPath('src/__tests__/index.test.js'),
     );
     this.fs.copy(
       this.templatePath('npmignore'),
@@ -120,14 +120,15 @@ module.exports = class extends Generator {
   }
 
   install() {
-    let deps = [
+    const deps = [
       '@babel/plugin-transform-modules-commonjs',
-      '@types/jest',
-      'eslint',
+      '@types/node',
+      '@vitest/coverage-v8',
+      'eslint@8',
       'eslint-config-cheminfo',
-      'jest',
       'prettier',
       'rollup',
+      'vitest',
     ];
 
     this.npmInstall(deps, { 'save-dev': true });
