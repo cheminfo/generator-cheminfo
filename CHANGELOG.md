@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.4...v4.14.0) (2024-08-05)
+
+
+### Features
+
+* update module generator to use vitest and last eslint-cheminfo-config ([#56](https://github.com/cheminfo/generator-cheminfo/issues/56)) ([a55049a](https://github.com/cheminfo/generator-cheminfo/commit/a55049ad9c07c8c8c7ed8194dc853f8e81b47d2d))
+
 ## [4.13.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.3...v4.13.4) (2024-04-03)
 
 
