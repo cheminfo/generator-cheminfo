@@ -124,7 +124,7 @@ module.exports = class extends Generator {
       '@babel/plugin-transform-modules-commonjs',
       '@types/node',
       '@vitest/coverage-v8',
-      'eslint@8',
+      'eslint',
       'eslint-config-cheminfo',
       'prettier',
       'rollup',
