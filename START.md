@@ -65,7 +65,7 @@ git push --set-upstream origin main
 Use
 
 ```
-npx jest --watch
+npx vitest
 ```
 
 to turn on the watch mode and automatically re-run tests.
