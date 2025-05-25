@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.14.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.14.0...v4.14.1) (2025-05-25)
+
+
+### Bug Fixes
+
+* use last version of eslint ([649b39a](https://github.com/cheminfo/generator-cheminfo/commit/649b39aae9dfeb6059fecdd1056973c04f6b913c))
+
 ## [4.14.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.13.4...v4.14.0) (2024-08-05)
 
 
