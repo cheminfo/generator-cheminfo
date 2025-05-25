@@ -81,8 +81,8 @@
 #### Misc changes
 
 1. Add `lib` in the `.gitignore` file.
-2. Install the `rimraf` module:
-   `npm i -D rimraf`
+2. Install the `rimraf` module and node types:
+   `npm i -D @types/node rimraf`
 3. Delete the `.babelrc` and `rollup.config.[m]js` files.
 4. Uninstall these modules:
    `npm remove rollup eslint-config-cheminfo`
