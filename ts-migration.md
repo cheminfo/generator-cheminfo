@@ -124,3 +124,11 @@ In unit tests that pass the wrong type especially to verify type checking, error
 ### Submit your changes
 
 Similar to step 1.
+
+## Step 3: convert files to TypeScript
+
+- Rename files to `.ts`
+- Use TypeScript types instead of JSDoc
+- When all files are in TS:
+  - Remove `noImplicitAny` from the config and fix errors
+  - Set `"allowJS": false` and remove `checkJS`
