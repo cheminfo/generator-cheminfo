@@ -1,4 +1,4 @@
-# Incremental migration of a repository to TypeScript
+# Incremental migration of a repository to TypeScript and ESM
 
 ## Step 1: use TypeScript to analyze and transpile the JavaScript
 
@@ -22,37 +22,31 @@
    ```json
    {
      "compilerOptions": {
-       "allowJs": true,
-       "esModuleInterop": true,
-       "moduleResolution": "node",
+       "lib": ["ES2022", "WebWorker"],
+       "types": [],
+       "target": "ES2022",
        "outDir": "lib",
-       "sourceMap": true,
+       "module": "NodeNext",
        "strict": true,
-       "target": "es2020"
-     },
-     "include": ["./src/**/*"]
-   }
-   ```
-3. Create a `tsconfig.cjs.json` with:
-   ```json
-   {
-     "extends": "./tsconfig.json",
-     "compilerOptions": {
-       "module": "commonjs",
+       "skipLibCheck": false,
+       "resolveJsonModule": false,
+       "forceConsistentCasingInFileNames": true,
+       "allowJs": true,
+       "isolatedModules": true,
+       "verbatimModuleSyntax": true,
+       "sourceMap": true,
        "declaration": true,
        "declarationMap": true
      },
-     "exclude": ["./src/**/__tests__"]
+     "include": ["src"]
    }
+
    ```
-4. Create a `tsconfig.esm.json` with:
+3. Create a `tsconfig.build.json` with:
    ```json
    {
-     "extends": "./tsconfig.cjs.json",
-     "compilerOptions": {
-       "module": "es2020",
-       "outDir": "lib-esm"
-     }
+     "extends": "./tsconfig.json",
+     "exclude": ["**/__tests__", "**/*.test.ts"]
    }
    ```
 
@@ -60,49 +54,39 @@
 
 1. Install our TypeScript ESLint configuration:
    `npm install -D eslint-config-cheminfo-typescript`
-2. Update `.eslintrc.yml` to extend the TypeScript config:
-   `extends: cheminfo-typescript`
-
-#### Configure Jest
-
-1. Install Babel plugins and Jest types:
-   `npm install -D @babel/preset-typescript @babel/plugin-transform-modules-commonjs @types/jest`
-2. Create (or update) `babel.config.js`, with the following contents:
-   ```javascript
-   module.exports = {
-     presets: ['@babel/preset-typescript'],
-     plugins: ['@babel/plugin-transform-modules-commonjs'],
-   };
+2. Update `eslint.config.mjs` to extend the TypeScript config:
+   ```js
+   import { defineConfig, globalIgnores } from 'eslint/config';
+   import ts from 'eslint-config-cheminfo-typescript/base';
+   
+   export default defineConfig(globalIgnores(['lib']), ts);
    ```
 
 #### Update package.json
 
-1. Make sure the `"main"` field points to `"./lib/index.js"`.
-2. Change the `"module"` field to point to `"./lib-esm/index.js"`.
-3. Add a `"types"` field with `"./lib/index.d.ts"`.
-4. Make sure the `"files"` field contains at least: `["src", "lib", "lib-esm"]`.
+1. Add `"type": "module"` under the `"description"` field.
+2. Remove the `"main"` and `"module"` fields.
+3. Add an `"exports"` field with `"./lib/index.js"`.
+4. Make sure the `"files"` field contains at least: `["lib", "src"]`.
 5. Add or change the following `"scripts"` (keep the scripts in alphabetical order):
    - `"check-types": "tsc --noEmit"`
-   - `"clean": "rimraf lib lib-esm"`
+   - `"clean": "rimraf lib"`
    - `"prepack": "npm run tsc"`
-   - `"tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm"`
-   - `"tsc-cjs": "tsc --project tsconfig.cjs.json"`
-   - `"tsc-esm": "tsc --project tsconfig.esm.json"`
+   - `"tsc": "npm run clean && npm run tsc-build"`
+   - `"tsc-build": "tsc --project tsconfig.build.json"`
 6. Remove the `"compile"` and `"prepublishOnly"` scripts if they exist.
-7. Add `&& npm run check-types` at the end of the `"test"` script.
+7. Add `&& npm run check-types` after `test-only` in the `"test"` script.
 8. Remove the `"jest"` field if it exists.
 
 #### Misc changes
 
-1. Add `lib` and `lib-esm` lines at the end of the `.gitignore` file.
+1. Add `lib` in the `.gitignore` file.
 2. Install the `rimraf` module:
    `npm i -D rimraf`
-3. Delete the `.babelrc` and `rollup.config.js` files.
+3. Delete the `.babelrc` and `rollup.config.[m]js` files.
 4. Uninstall these modules:
    `npm remove rollup eslint-config-cheminfo`
-5. Replace the contents of the file in `.github/workflows/nodejs.yml` with a copy of our [template](https://github.com/cheminfo/.github/blob/main/workflow-templates/nodejs-ts.yml):
-   - Replace `$default-branch` with the name of the default branch in the repository (either `main` or `master`).
-   - Make sure the `node-version-matrix` array contains the same values as before.
+5. Replace the contents of the file in `.github/workflows/nodejs.yml` with a copy of our [template](https://github.com/cheminfo/.github/blob/main/workflow-templates/nodejs-ts.yml)
 
 ### Submit your changes
 
@@ -110,12 +94,15 @@ Now the project should be ready to effectively rewrite files in TypeScript. Subm
 
 1. Verify that the tests still pass:
    `npm t`
-2. Create a new branch:
+2. Verify that the build works:
+   - `npm run prepack`
+   - `node lib/index.js`
+3. Create a new branch:
    `git switch -c setup-typescript`
-3. Commit all your changes:
+4. Commit all your changes:
    - `git add .`
-   - `git commit -m"refactor: setup project for TypeScript"`
-4. Open a pull request:
+   - `git commit -m"refactor!: migrate to TypeScript and ESM"`
+5. Open a pull request:
    `gh pr create`
 
 ## Step 2: use TypeScript to check types in JavaScript
