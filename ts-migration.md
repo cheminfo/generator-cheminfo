@@ -52,18 +52,53 @@
 #### Update package.json
 
 1. Add `"type": "module"` under the `"description"` field.
-2. Remove the `"main"` and `"module"` fields.
+2. Remove the `"main"` and `"module"` and `"types"` fields.
 3. Add an `"exports"` field with `"./lib/index.js"`.
 4. Make sure the `"files"` field contains at least: `["lib", "src"]`.
 5. Add or change the following `"scripts"` (keep the scripts in alphabetical order):
    - `"check-types": "tsc --noEmit"`
    - `"clean": "rimraf lib"`
    - `"prepack": "npm run tsc"`
+   - `"test-only": "vitest --run --coverage"`
    - `"tsc": "npm run clean && npm run tsc-build"`
    - `"tsc-build": "tsc --project tsconfig.build.json"`
 6. Remove the `"compile"` and `"prepublishOnly"` scripts if they exist.
 7. Add `&& npm run check-types` after `test-only` in the `"test"` script.
 8. Remove the `"jest"` field if it exists.
+
+#### Migrate from jest to vitest (if needed)
+
+1. remove `jest.config.js`
+2. run `npm remove jest @types/jest`
+3. run `npm i -D vitest @vitest/coverage-v8`
+4. add `vitest.config.ts` with the following content:
+   ```ts
+   import { defineConfig } from 'vitest/config';
+
+   export default defineConfig({
+    test: {
+      coverage: {
+        include: ['src/**'],
+      },
+      // setupFiles: ['vitest.setup.ts'],
+    },
+   });
+   ```
+   Uncomment the `setupFiles` line if you have to `extend` `vitest`.
+   ```ts
+   // vitest.setup.ts example
+   import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
+   import { expect } from 'vitest';
+
+   expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
+   ```
+5. ensure tests files are named `*.test.ts` (`*.test.js` may not work)
+6. check if the tests pass with `npm run test-only -- --globals`  
+   (the `--globals` flag is like jest with testing globals like `describe`, `it`, etc.)
+7. import vitest in your test files and rerun without the `--globals` flag:
+   ```ts
+   import { describe, it, expect } from 'vitest';
+   ```
 
 #### Misc changes
 
