@@ -70,7 +70,7 @@
 
 1. remove `jest.config.js`
 2. run `npm remove jest @types/jest`
-3. run `npm i -D vitest @vitest/coverage-c8`
+3. run `npm i -D vitest @vitest/coverage-v8`
 4. add `vitest.config.ts` with the following content:
    ```ts
    import { defineConfig } from 'vitest/config';
@@ -84,7 +84,7 @@
     },
    });
    ```
-   Uncomment the `setupFiles` line if you have a have to `extend` `vitest`.
+   Uncomment the `setupFiles` line if you have to `extend` `vitest`.
    ```ts
    // vitest.setup.ts example
    import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
