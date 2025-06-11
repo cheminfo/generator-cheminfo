@@ -16,27 +16,14 @@
 
 #### Install and configure TypeScript
 
-1. Install TypeScript:
-   `npm install -D typescript` (`-D` is equivalent to `--save-dev`)
+1. Install TypeScript and our base config:
+   `npm install -D typescript @zakodium/tsconfig` (`-D` is equivalent to `--save-dev`)
 2. Create a `tsconfig.json` with:
    ```json
    {
+     "extends": "@zakodium/tsconfig",
      "compilerOptions": {
-       "lib": ["ES2022", "WebWorker"],
-       "types": [],
-       "target": "ES2022",
-       "outDir": "lib",
-       "module": "NodeNext",
-       "strict": true,
-       "skipLibCheck": false,
-       "resolveJsonModule": false,
-       "forceConsistentCasingInFileNames": true,
-       "allowJs": true,
-       "isolatedModules": true,
-       "verbatimModuleSyntax": true,
-       "sourceMap": true,
-       "declaration": true,
-       "declarationMap": true
+       "outDir": "lib"
      },
      "include": ["src"]
    }
