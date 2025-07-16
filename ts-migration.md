@@ -25,7 +25,7 @@
      "compilerOptions": {
        "outDir": "lib"
      },
-     "include": ["src"]
+     "include": ["src", "vite*.ts"]
    }
 
    ```
@@ -33,6 +33,7 @@
    ```json
    {
      "extends": "./tsconfig.json",
+     "include": ["src"],
      "exclude": ["**/__tests__", "**/*.test.ts"]
    }
    ```
