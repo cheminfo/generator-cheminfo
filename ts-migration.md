@@ -41,7 +41,7 @@
 
 1. Install our TypeScript ESLint configuration:
    `npm install -D eslint-config-cheminfo-typescript`
-2. Update `eslint.config.mjs` to extend the TypeScript config:
+2. Update `eslint.config.js` to extend the TypeScript config:
    ```js
    import { defineConfig, globalIgnores } from 'eslint/config';
    import ts from 'eslint-config-cheminfo-typescript/base';
