@@ -69,7 +69,6 @@ module.exports = class extends Generator {
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
-      notOnlyNode: !this.props.node,
       description: this.props.description,
       date: year + '-' + month + '-' + day,
       year: year,
@@ -80,35 +79,22 @@ module.exports = class extends Generator {
       this.destinationPath('tsconfig.json'),
     );
     this.fs.copy(
-      this.templatePath('tsconfig.cjs.json'),
-      this.destinationPath('tsconfig.cjs.json'),
-    );
-    if (includes.notOnlyNode) {
-      this.fs.copy(
-        this.templatePath('tsconfig.esm.json'),
-        this.destinationPath('tsconfig.esm.json'),
-      );
-    }
-    this.fs.copy(
-      this.templatePath('eslintrc.yml'),
-      this.destinationPath('.eslintrc.yml'),
+      this.templatePath('tsconfig.build.json'),
+      this.destinationPath('tsconfig.build.json'),
     );
     this.fs.copy(
-      this.templatePath('babel.config.js'),
-      this.destinationPath('babel.config.js'),
+      this.templatePath('eslint.config.js'),
+      this.destinationPath('eslint.config.js'),
     );
     this.fs.copy(
       this.templatePath('index.ts'),
       this.destinationPath('src/index.ts'),
     );
     this.fs.copy(
-      this.templatePath('test.ts'),
-      this.destinationPath('src/__tests__/test.ts'),
+      this.templatePath('index.test.ts'),
+      this.destinationPath('src/__tests__/index.test.ts'),
     );
-    this.fs.copy(
-      this.templatePath('npmignore'),
-      this.destinationPath('src/.npmignore'),
-    );
+
     this.fs.copy(
       this.templatePath('prettierrc.json'),
       this.destinationPath('.prettierrc.json'),
@@ -134,19 +120,24 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       includes,
     );
+    this.fs.copyTpl(
+      this.templatePath('vitest.config.ts'),
+      this.destinationPath('vitest.config.ts'),
+      includes,
+    );
   }
 
   install() {
     let deps = [
-      '@babel/preset-typescript',
-      '@babel/plugin-transform-modules-commonjs',
-      '@types/jest',
+      '@types/node',
+      '@vitest/coverage-istanbul',
+      '@zakodium/tsconfig',
       'eslint',
       'eslint-config-cheminfo-typescript',
-      'jest',
       'prettier',
       'rimraf',
       'typescript',
+      'vitest'
     ];
 
     this.npmInstall(deps, { 'save-dev': true });
