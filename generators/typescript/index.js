@@ -94,7 +94,10 @@ module.exports = class extends Generator {
       this.templatePath('index.test.ts'),
       this.destinationPath('src/__tests__/index.test.ts'),
     );
-
+    this.fs.copy(
+      this.templatePath('npmignore'),
+      this.destinationPath('src/.npmignore'),
+    );
     this.fs.copy(
       this.templatePath('prettierrc.json'),
       this.destinationPath('.prettierrc.json'),
@@ -137,7 +140,7 @@ module.exports = class extends Generator {
       'prettier',
       'rimraf',
       'typescript',
-      'vitest'
+      'vitest',
     ];
 
     this.npmInstall(deps, { 'save-dev': true });
