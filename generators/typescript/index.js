@@ -102,6 +102,14 @@ module.exports = class extends Generator {
       this.templatePath('prettierrc.json'),
       this.destinationPath('.prettierrc.json'),
     );
+    this.fs.copy(
+      this.templatePath('actions/nodejs.yml'),
+      this.destinationPath('.github/workflows/nodejs.yml'),
+    );
+    this.fs.copy(
+      this.templatePath('actions/release.yml'),
+      this.destinationPath('.github/workflows/release.yml'),
+    );
     this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
     this.fs.copyTpl(
       this.templatePath('gitignore'),
