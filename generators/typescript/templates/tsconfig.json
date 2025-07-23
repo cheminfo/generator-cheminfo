@@ -2,7 +2,6 @@
   "extends": "@zakodium/tsconfig",
   "compilerOptions": {
     "allowJs": true,
-    "allowImportingTsExtensions": true,
     "checkJs": true,
     "noUncheckedIndexedAccess": false,
     "outDir": "lib",
