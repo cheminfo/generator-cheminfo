@@ -2,30 +2,27 @@
   "name": "<%= npmName %>",
   "version": "0.0.0",
   "description": "<%= description %>",
-  "main": "./lib/index.js",<% if (notOnlyNode) { %>
-  "module": "./lib-esm/index.js",<% } %>
-  "types": "./lib/index.d.ts",
+  "type": "module",
+  "exports": "./lib/index.js",
   "keywords": [],
   "author": "<%= userName %>",
   "license": "MIT",
   "files": [
     "src",
-    "lib"<% if (notOnlyNode) { %>,
-    "lib-esm"<% } %>
+    "lib"
   ],
   "scripts": {
     "check-types": "tsc --noEmit",
-    "clean": "rimraf lib<% if (notOnlyNode) { %> lib-esm<% } %>",
+    "clean": "rimraf lib",
     "eslint": "eslint src --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "npm run tsc",
     "prettier": "prettier --check src",
     "prettier-write": "prettier --write src",
     "test": "npm run test-only && npm run eslint && npm run prettier && npm run check-types",
-    "test-only": "jest --coverage",
-    "tsc": "npm run clean && npm run tsc-cjs<% if (notOnlyNode) { %> && npm run tsc-esm<% } %>",
-    "tsc-cjs": "tsc --project tsconfig.cjs.json"<% if (notOnlyNode) { %>,
-    "tsc-esm": "tsc --project tsconfig.esm.json"<% } %>
+    "test-only": "vitest --run --coverage",
+    "tsc": "npm run clean && npm run tsc-build",
+    "tsc-build": "tsc --project tsconfig.build.json"
   },
   "repository": {
     "type": "git",
