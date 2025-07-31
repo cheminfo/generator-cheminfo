@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.15.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.14.1...v4.15.0) (2025-07-24)
+
+
+### Features
+
+* update generator for typescript / javascript module ([#60](https://github.com/cheminfo/generator-cheminfo/issues/60)) ([571902b](https://github.com/cheminfo/generator-cheminfo/commit/571902b09c4c5b55fa5d113d473552c98b2c5bc2))
+
 ## [4.14.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.14.0...v4.14.1) (2025-05-25)
 
 
