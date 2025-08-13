@@ -19,6 +19,7 @@
 1. Install TypeScript and our base config:
    `npm install -D typescript @zakodium/tsconfig` (`-D` is equivalent to `--save-dev`)
 2. Create a `tsconfig.json` with:
+
    ```json
    {
      "extends": "@zakodium/tsconfig",
@@ -27,8 +28,8 @@
      },
      "include": ["src", "vite*.ts"]
    }
-
    ```
+
 3. Create a `tsconfig.build.json` with:
    ```json
    {
@@ -43,10 +44,11 @@
 1. Install our TypeScript ESLint configuration:
    `npm install -D eslint-config-cheminfo-typescript`
 2. Update `eslint.config.js` to extend the TypeScript config:
+
    ```js
    import { defineConfig, globalIgnores } from 'eslint/config';
    import ts from 'eslint-config-cheminfo-typescript/base';
-   
+
    export default defineConfig(globalIgnores(['coverage', 'lib']), ts);
    ```
 
@@ -54,7 +56,7 @@
 
 1. Add `"type": "module"` under the `"description"` field.
 2. Remove the `"main"` and `"module"` and `"types"` fields.
-3. Add an `"exports"` field with `"./lib/index.js"`.
+3. Add an `"exports"` field with `{ ".": "./lib/index.js" }`.
 4. Make sure the `"files"` field contains at least: `["lib", "src"]`.
 5. Add or change the following `"scripts"` (keep the scripts in alphabetical order):
    - `"check-types": "tsc --noEmit"`
@@ -73,19 +75,22 @@
 2. run `npm remove jest @types/jest`
 3. run `npm i -D vitest @vitest/coverage-v8`
 4. add `vitest.config.ts` with the following content:
+
    ```ts
    import { defineConfig } from 'vitest/config';
 
    export default defineConfig({
-    test: {
-      coverage: {
-        include: ['src/**'],
-      },
-      // setupFiles: ['vitest.setup.ts'],
-    },
+     test: {
+       coverage: {
+         include: ['src/**'],
+       },
+       // setupFiles: ['vitest.setup.ts'],
+     },
    });
    ```
+
    Uncomment the `setupFiles` line if you have to `extend` `vitest`.
+
    ```ts
    // vitest.setup.ts example
    import { toBeDeepCloseTo, toMatchCloseTo } from 'jest-matcher-deep-close-to';
@@ -93,6 +98,7 @@
 
    expect.extend({ toBeDeepCloseTo, toMatchCloseTo });
    ```
+
 5. ensure tests files are named `*.test.ts` (`*.test.js` may not work)
 6. check if the tests pass with `npm run test-only -- --globals`  
    (the `--globals` flag is like jest with testing globals like `describe`, `it`, etc.)
