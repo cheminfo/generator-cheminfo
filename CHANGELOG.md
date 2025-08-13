@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.16.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.15.0...v4.16.0) (2025-08-13)
+
+
+### Features
+
+* update generator dependencies ([0fcd059](https://github.com/cheminfo/generator-cheminfo/commit/0fcd0597655f9186befe1add73d704c343061bed))
+* update typescript projects template ([0c01834](https://github.com/cheminfo/generator-cheminfo/commit/0c01834847861fabaf7494afcbb5fabe4e395d82))
+
 ## [4.15.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.14.1...v4.15.0) (2025-07-24)
 
 
