@@ -4,8 +4,10 @@ export default defineConfig({
   test: {
     coverage: {
       include: ['src/**'],
-      provider: 'istanbul',
+      provider: 'v8',
     },
-    setupFiles: [], 
+    setupFiles: [
+      // 'vitest.setup.ts',
+    ],
   },
 });

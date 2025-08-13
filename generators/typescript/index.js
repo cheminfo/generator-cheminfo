@@ -41,12 +41,6 @@ module.exports = class extends Generator {
         name: 'description',
         message: 'Your package description',
       },
-      {
-        type: 'confirm',
-        name: 'node',
-        message: 'Is it a Node.js-only library?',
-        default: false,
-      },
     ];
 
     return this.prompt(prompts).then(
@@ -141,7 +135,7 @@ module.exports = class extends Generator {
   install() {
     let deps = [
       '@types/node',
-      '@vitest/coverage-istanbul',
+      '@vitest/coverage-v8',
       '@zakodium/tsconfig',
       'eslint',
       'eslint-config-cheminfo-typescript',
