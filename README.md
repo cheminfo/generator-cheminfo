@@ -3,11 +3,11 @@
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 
-> Generator for the different cheminfo organizations
+> Generator for the different ChemInfo organizations.
 
 ## Installation
 
-First, install [Yeoman](https://yeoman.io) and generator-cheminfo using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](https://yeoman.io) and generator-cheminfo using [npm](https://www.npmjs.com/) (we assume you have pre-installed [Node.js](https://nodejs.org/)).
 
 ```bash
 npm i -g yo generator-cheminfo
@@ -18,27 +18,24 @@ Then go to a new directory and generate your project:
 ```bash
 mkdir my-new-project
 cd my-new-project
-yo cheminfo:module
+yo cheminfo:typescript
 ```
 
 The following generators are available:
 
 ```bash
+yo cheminfo:typescript
+# All the following are deprecated or not up to date.
 yo cheminfo:commonjs
 yo cheminfo:lerna-module
 yo cheminfo:module
-yo cheminfo:typescript
 yo cheminfo:react-frontend
 ```
 
 After creating a project with a generator, you can add GitHub actions workflows
 to it from GitHub's interface. Click on the "Actions" tab and then on "New workflow".
 You will be able to choose a workflow from our templates. It is recommended to
-add the a "Node.js CI" workflow to all new modules.
-
-### react-frontend
-
-Basic project that includes tailwind-css and cheminfo formatting rules.
+add the "Node.js CI" workflow to all new modules.
 
 ## License
 

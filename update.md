@@ -1,6 +1,6 @@
 # Update actions
 
-## Javascript project
+## JavaScript project
 
 GitHub workflows are now based on a template and need to be updated. The templates are in one of those 2 directories:
 
@@ -14,16 +14,14 @@ In particular those 2 actions need to be updated:
 
 When copying those 2 files please take care:
 
-- To change the `$default-branch` to `master` or `main`
-- To keep the existing [test matrix](https://github.com/cheminfo/.github/blob/4cbb40a6c91d6e9c70e98b5f0c965023024f8518/workflow-templates/nodejs.yml#L14)
+- To change the `$default-branch` to `main`
 
 Please also check that in package.json the following 4 commands are present:
 
 ```json
-    "eslint": "eslint src --cache",
-    "eslint-fix": "npm run eslint -- --fix",
+    "eslint": "eslint .",
+    "eslint-fix": "eslint . --fix",
     "prepack": "npm run tsc",
-    "prettier": "prettier --check src",
-    "prettier-write": "prettier --write src",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
 ```
-

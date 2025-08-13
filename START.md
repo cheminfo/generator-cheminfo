@@ -4,7 +4,7 @@
 
 - Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Install [VScode](https://code.visualstudio.com/)
-- If you are on macintosh please install brew: https://brew.sh/.
+- If you are on macOS please install brew: https://brew.sh/.
 - Install the following plugins in VScode:
   - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -15,7 +15,7 @@
   - save on focus change
 - Install [volta](https://docs.volta.sh/guide/getting-started)
   - `volta install node`: install last version of `node`
-- Install [gh](https://github.com/cli/cli) - on OsX: `brew install gh` 
+- Install [gh](https://github.com/cli/cli) - on OsX: `brew install gh`
 
 Search and directly edit the configuration JSON of vscode to turn on auto-formatting on save (`SHIFT + CTRL + P`, then search 'Preferences: Open settings (JSON)' )
 
@@ -78,14 +78,13 @@ Or enjoy this website: https://roadmap.sh/javascript
 
 ## Learning typescript
 
-https://www.typescriptlang.org/docs/handbook/intro.html 
+https://www.typescriptlang.org/docs/handbook/intro.html
 
 ## Documentation
 
 We should try to ducmentation all the functions that we create using jsdoc. Here is an example of it's usage:
 
 https://devhints.io/jsdoc
-
 
 ## Starting to develop in react
 

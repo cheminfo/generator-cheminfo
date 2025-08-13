@@ -1,10 +1,8 @@
-'use strict';
+import cp from 'node:child_process';
+import path from 'node:path';
 
-const cp = require('child_process');
-const path = require('path');
-
-const camelCase = require('camelcase');
-const Generator = require('yeoman-generator');
+import camelCase from 'camelcase';
+import Generator from 'yeoman-generator';
 
 let username = ' ';
 
@@ -15,8 +13,8 @@ try {
   console.error('Missing git configuration');
 }
 
-module.exports = class extends Generator {
-  prompting() {
+export default class LernaModuleGenerator extends Generator {
+  async prompting() {
     const prompts = [
       {
         type: 'input',
@@ -43,12 +41,8 @@ module.exports = class extends Generator {
       },
     ];
 
-    return this.prompt(prompts).then(
-      function (props) {
-        // To access props later use this.props.name;
-        this.props = props;
-      }.bind(this),
-    );
+    // To access props later use this.props.name;
+    this.props = await this.prompt(prompts);
   }
 
   writing() {
@@ -106,4 +100,4 @@ module.exports = class extends Generator {
       includes,
     );
   }
-};
+}

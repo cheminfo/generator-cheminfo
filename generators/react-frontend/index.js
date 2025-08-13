@@ -1,10 +1,8 @@
-'use strict';
+import cp from 'node:child_process';
+import path from 'node:path';
 
-const cp = require('child_process');
-const path = require('path');
-
-const camelCase = require('camelcase');
-const Generator = require('yeoman-generator');
+import camelCase from 'camelcase';
+import Generator from 'yeoman-generator';
 
 let username = ' ';
 
@@ -15,8 +13,8 @@ try {
   console.error('Missing git configuration');
 }
 
-module.exports = class extends Generator {
-  prompting() {
+export default class ReactFrontendGenerator extends Generator {
+  async prompting() {
     const prompts = [
       {
         type: 'input',
@@ -43,15 +41,11 @@ module.exports = class extends Generator {
       },
     ];
 
-    return this.prompt(prompts).then(
-      function (props) {
-        // To access props later use this.props.name;
-        this.props = props;
-      }.bind(this),
-    );
+    // To access props later use this.props.name;
+    this.props = await this.prompt(prompts);
   }
 
-  writing() {
+  async writing() {
     const date = new Date();
     const day = date.getDate();
     const month = date.getMonth();
@@ -147,18 +141,17 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'),
       includes,
     );
-  }
 
-  install() {
-    let deps = [
-      // dependencies
+    await this.addDependencies([
       '@testing-library/jest-dom',
       '@testing-library/react',
       '@testing-library/user-event',
       'react',
       'react-dom',
       'react-scripts',
-      // dev dependencies
+    ]);
+
+    await this.addDevDependencies([
       'autoprefixer',
       'eslint',
       'eslint-config-cheminfo-react',
@@ -166,8 +159,6 @@ module.exports = class extends Generator {
       'prettier',
       'prop-types',
       'tailwindcss',
-    ];
-
-    this.npmInstall(deps, { 'save-dev': true });
+    ]);
   }
-};
+}

@@ -1,8 +1,6 @@
-'use strict';
+import cp from 'node:child_process';
 
-const cp = require('child_process');
-
-const Generator = require('yeoman-generator');
+import Generator from 'yeoman-generator';
 
 let username = ' ';
 
@@ -13,7 +11,7 @@ try {
   console.error('Missing git configuration');
 }
 
-module.exports = class extends Generator {
+export default class CheminfoRootGenerator extends Generator {
   prompting() {
     this.log('The following generators are available:');
     this.log('- yo cheminfo:module');
@@ -26,4 +24,4 @@ module.exports = class extends Generator {
   writing() {}
 
   install() {}
-};
+}

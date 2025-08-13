@@ -1,10 +1,8 @@
-'use strict';
+import cp from 'child_process';
+import path from 'path';
 
-const cp = require('child_process');
-const path = require('path');
-
-const camelCase = require('camelcase');
-const Generator = require('yeoman-generator');
+import camelCase from 'camelcase';
+import Generator from 'yeoman-generator';
 
 let username = ' ';
 
@@ -15,8 +13,8 @@ try {
   console.error('Missing git configuration');
 }
 
-module.exports = class extends Generator {
-  prompting() {
+export default class TypescriptGenerator extends Generator {
+  async prompting() {
     const prompts = [
       {
         type: 'input',
@@ -43,15 +41,11 @@ module.exports = class extends Generator {
       },
     ];
 
-    return this.prompt(prompts).then(
-      function (props) {
-        // To access props later use this.props.name;
-        this.props = props;
-      }.bind(this),
-    );
+    // To access props later use this.props.name;
+    this.props = await this.prompt(prompts);
   }
 
-  writing() {
+  async writing() {
     const date = new Date();
     const day = date.getDate();
     const month = date.getMonth();
@@ -130,10 +124,8 @@ module.exports = class extends Generator {
       this.destinationPath('vitest.config.ts'),
       includes,
     );
-  }
 
-  install() {
-    let deps = [
+    await this.addDevDependencies([
       '@types/node',
       '@vitest/coverage-v8',
       '@zakodium/tsconfig',
@@ -143,8 +135,6 @@ module.exports = class extends Generator {
       'rimraf',
       'typescript',
       'vitest',
-    ];
-
-    this.npmInstall(deps, { 'save-dev': true });
+    ]);
   }
-};
+}
