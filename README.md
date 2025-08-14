@@ -25,11 +25,6 @@ The following generators are available:
 
 ```bash
 yo cheminfo:typescript
-# All the following are deprecated or not up to date.
-yo cheminfo:commonjs
-yo cheminfo:lerna-module
-yo cheminfo:module
-yo cheminfo:react-frontend
 ```
 
 After creating a project with a generator, you can add GitHub actions workflows

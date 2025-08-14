@@ -45,7 +45,7 @@ This means that if you want to create a new project `ml-graph` in the organizati
 npm install --global yo generator-cheminfo
 
 cd projectName
-yo cheminfo:module ## or yo cheminfo:typescript
+yo cheminfo:typescript
 ```
 
 ## Create the project on github
