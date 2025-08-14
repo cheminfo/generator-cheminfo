@@ -145,7 +145,7 @@ export default class TypescriptGenerator extends Generator {
     );
     this.fs.copy(
       this.templatePath('prettierignore'),
-      this.destinationPath('src/.prettierignore'),
+      this.destinationPath('.prettierignore'),
     );
     this.fs.copy(
       this.templatePath('actions/nodejs.yml'),
