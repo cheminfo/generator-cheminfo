@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.1...v4.16.2) (2025-08-14)
+
+
+### Bug Fixes
+
+* **typescript:** location of .prettierignore ([ce2fe81](https://github.com/cheminfo/generator-cheminfo/commit/ce2fe812d7721c8dd5a853cd2cf264ae403e7c61))
+
 ## [4.16.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.0...v4.16.1) (2025-08-14)
 
 
