@@ -1,4 +1,4 @@
-# <%= name %>
+# <%= npmName %>
 
 [![NPM version](https://img.shields.io/npm/v/<%= npmName %>.svg)](https://www.npmjs.com/package/<%= npmName %>)
 [![npm download](https://img.shields.io/npm/dm/<%= npmName %>.svg)](https://www.npmjs.com/package/<%= npmName %>)

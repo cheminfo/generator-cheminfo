@@ -3,6 +3,7 @@ import path from 'path';
 
 import camelCase from 'camelcase';
 import Generator from 'yeoman-generator';
+import latestVersion from 'latest-version';
 
 let username = ' ';
 
@@ -43,6 +44,59 @@ export default class TypescriptGenerator extends Generator {
 
     // To access props later use this.props.name;
     this.props = await this.prompt(prompts);
+
+    const prefix = this.props.org === 'mljs' ? 'ml-' : '';
+    this.props.npmName = prefix + this.props.name;
+  }
+
+  async configuring() {
+    const devDependencies = await resolveDependencies([
+      '@types/node',
+      '@vitest/coverage-v8',
+      '@zakodium/tsconfig',
+      'eslint',
+      'eslint-config-cheminfo-typescript',
+      'prettier',
+      'rimraf',
+      'typescript',
+      'vitest',
+    ]);
+    this.packageJson.merge({
+      name: this.props.npmName,
+      version: '0.0.0',
+      license: 'MIT',
+      description: this.props.description,
+      keywords: [],
+      author: this.props.userName,
+      type: 'module',
+      exports: {
+        '.': './lib/index.js',
+      },
+      files: ['lib', 'src'],
+      scripts: {
+        'check-types': 'tsc --noEmit',
+        clean: 'rimraf coverage lib',
+        eslint: 'eslint .',
+        'eslint-fix': 'eslint . --fix',
+        prepack: 'npm run tsc',
+        prettier: 'prettier --check .',
+        'prettier-write': 'prettier --write .',
+        test: 'npm run test-only && npm run check-types && npm run eslint && npm run prettier',
+        'test-only': 'vitest run --coverage',
+        tsc: 'npm run clean && npm run tsc-build',
+        'tsc-build': 'tsc --project tsconfig.build.json',
+      },
+      dependencies: {},
+      devDependencies,
+      repository: {
+        type: 'git',
+        url: `git+https://github.com/${this.props.org}/${this.props.name}.git`,
+      },
+      bugs: {
+        url: `https://github.com/${this.props.org}/${this.props.name}/issues`,
+      },
+      homepage: `https://github.com/${this.props.org}/${this.props.name}#readme`,
+    });
   }
 
   async writing() {
@@ -51,9 +105,8 @@ export default class TypescriptGenerator extends Generator {
     const month = date.getMonth();
     const year = date.getFullYear();
     const camelName = camelCase(this.props.name);
-    const prefix = this.props.org === 'mljs' ? 'ml-' : '';
     const includes = {
-      npmName: prefix + this.props.name,
+      npmName: this.props.npmName,
       name: this.props.name,
       org: this.props.org,
       userName: this.props.userName,
@@ -119,26 +172,18 @@ export default class TypescriptGenerator extends Generator {
       includes,
     );
     this.fs.copyTpl(
-      this.templatePath('package'),
-      this.destinationPath('package.json'),
-      includes,
-    );
-    this.fs.copyTpl(
       this.templatePath('vitest.config.ts'),
       this.destinationPath('vitest.config.ts'),
       includes,
     );
-
-    await this.addDevDependencies([
-      '@types/node',
-      '@vitest/coverage-v8',
-      '@zakodium/tsconfig',
-      'eslint',
-      'eslint-config-cheminfo-typescript',
-      'prettier',
-      'rimraf',
-      'typescript',
-      'vitest',
-    ]);
   }
+}
+
+async function resolveDependencies(dependencies) {
+  const deps = {};
+  for (const dep of dependencies) {
+    const version = await latestVersion(dep);
+    deps[dep] = `^${version}`;
+  }
+  return deps;
 }

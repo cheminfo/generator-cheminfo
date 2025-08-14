@@ -1,12 +1,8 @@
 {
   "name": "generator-cheminfo",
   "version": "4.16.0",
+  "license": "MIT",
   "description": "Generator for the different cheminfo organizations",
-  "author": "Miguel Asencio <maasencioh@gmail.com>",
-  "type": "module",
-  "files": [
-    "generators"
-  ],
   "keywords": [
     "machine",
     "learning",
@@ -15,9 +11,18 @@
     "informatics",
     "yeoman-generator"
   ],
+  "author": "Miguel Asencio <maasencioh@gmail.com>",
+  "type": "module",
+  "files": [
+    "generators"
+  ],
   "dependencies": {
     "camelcase": "^8.0.0",
+    "latest-version": "^9.0.0",
     "yeoman-generator": "^7.5.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
   },
   "repository": {
     "type": "git",
@@ -26,9 +31,5 @@
   "bugs": {
     "url": "https://github.com/cheminfo/generator-cheminfo/issues"
   },
-  "homepage": "https://github.com/cheminfo/generator-cheminfo#readme",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "^3.6.2"
-  }
+  "homepage": "https://github.com/cheminfo/generator-cheminfo#readme"
 }
