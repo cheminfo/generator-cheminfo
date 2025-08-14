@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.16.1](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.0...v4.16.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* **typescript:** add .prettierignore file ([0384d15](https://github.com/cheminfo/generator-cheminfo/commit/0384d158b60d70f226c8117676f948f773ba0c0d))
+* **typescript:** check indexed access by default ([c03a7f0](https://github.com/cheminfo/generator-cheminfo/commit/c03a7f0e823fe03ccdfd216cda98ec1c67c2fcdc))
+* **typescript:** correctly setup package.json ([590e53f](https://github.com/cheminfo/generator-cheminfo/commit/590e53f2c37992fda8d6e8058f32216c02729cea))
+* **typescript:** do not allow JS ([28ea33b](https://github.com/cheminfo/generator-cheminfo/commit/28ea33b0ac22119d53afc95d94c8c124d9105759))
+* **typescript:** exclude test files outside of `__tests__` ([52ae324](https://github.com/cheminfo/generator-cheminfo/commit/52ae3244678ac52cc66f35970523c2f4b8d26653))
+* **typescript:** ignore all files matching `.test.` ([62834e9](https://github.com/cheminfo/generator-cheminfo/commit/62834e90c215ee6200310f8c511aa1aca19105bc))
+* **typescript:** use explicit exports mapping ([1786d58](https://github.com/cheminfo/generator-cheminfo/commit/1786d58eb3af0ac3b8ef3bf4d61bfdbd4d3c5f71))
+
 ## [4.16.0](https://github.com/cheminfo/generator-cheminfo/compare/v4.15.0...v4.16.0) (2025-08-13)
 
 
