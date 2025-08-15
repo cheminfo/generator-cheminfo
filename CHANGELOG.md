@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.2...v4.16.3) (2025-08-15)
+
+
+### Bug Fixes
+
+* **typescript:** improve tsconfig and ts migration docs ([b1d9c5a](https://github.com/cheminfo/generator-cheminfo/commit/b1d9c5a0a48c3bbbdeecc389e701b900f0ed7d20))
+
 ## [4.16.2](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.1...v4.16.2) (2025-08-14)
 
 
