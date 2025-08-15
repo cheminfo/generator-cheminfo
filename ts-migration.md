@@ -62,9 +62,9 @@
 4. Make sure the `"files"` field contains at least: `["lib", "src"]`.
 5. Add or change the following `"scripts"` (keep the scripts in alphabetical order):
    - `"check-types": "tsc --noEmit"`
-   - `"clean": "rimraf lib"`
+   - `"clean": "rimraf coverage lib"`
    - `"prepack": "npm run tsc"`
-   - `"test-only": "vitest --run --coverage"`
+   - `"test-only": "vitest run --coverage"`
    - `"tsc": "npm run clean && npm run tsc-build"`
    - `"tsc-build": "tsc --project tsconfig.build.json"`
 6. Remove the `"compile"` and `"prepublishOnly"` scripts if they exist.
