@@ -24,7 +24,9 @@
    {
      "extends": "@zakodium/tsconfig",
      "compilerOptions": {
-       "outDir": "lib"
+       "noUncheckedIndexedAccess": true,
+       "outDir": "lib",
+       "types": ["node"],
      },
      "include": ["src", "vite*.ts"]
    }
@@ -35,7 +37,7 @@
    {
      "extends": "./tsconfig.json",
      "include": ["src"],
-     "exclude": ["**/__tests__", "**/*.test.ts"]
+     "exclude": ["**/__tests__", "**/*.test.*"]
    }
    ```
 
