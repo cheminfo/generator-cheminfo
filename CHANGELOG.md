@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.3...v4.16.4) (2025-10-15)
+
+
+### Bug Fixes
+
+* generate correct links for scoped packages ([8eec00f](https://github.com/cheminfo/generator-cheminfo/commit/8eec00f867b720e63ba05ff73de957b004659c88))
+
 ## [4.16.3](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.2...v4.16.3) (2025-08-15)
 
 
