@@ -20,7 +20,7 @@ export default class TypescriptGenerator extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'Your project name',
+        message: 'Your package name',
         default: path.basename(this.destinationRoot()), // Default to current folder name
       },
       {
@@ -46,6 +46,7 @@ export default class TypescriptGenerator extends Generator {
     this.props = await this.prompt(prompts);
 
     const prefix = this.props.org === 'mljs' ? 'ml-' : '';
+    this.props.repoName = this.props.name.split('/').at(-1);
     this.props.npmName = prefix + this.props.name;
   }
 
@@ -90,12 +91,12 @@ export default class TypescriptGenerator extends Generator {
       devDependencies,
       repository: {
         type: 'git',
-        url: `git+https://github.com/${this.props.org}/${this.props.name}.git`,
+        url: `git+https://github.com/${this.props.org}/${this.props.repoName}.git`,
       },
       bugs: {
-        url: `https://github.com/${this.props.org}/${this.props.name}/issues`,
+        url: `https://github.com/${this.props.org}/${this.props.repoName}/issues`,
       },
-      homepage: `https://github.com/${this.props.org}/${this.props.name}#readme`,
+      homepage: `https://github.com/${this.props.org}/${this.props.repoName}#readme`,
     });
   }
 
@@ -106,6 +107,7 @@ export default class TypescriptGenerator extends Generator {
     const year = date.getFullYear();
     const camelName = camelCase(this.props.name);
     const includes = {
+      repoName: this.props.repoName,
       npmName: this.props.npmName,
       name: this.props.name,
       org: this.props.org,
@@ -156,10 +158,9 @@ export default class TypescriptGenerator extends Generator {
       this.destinationPath('.github/workflows/release.yml'),
     );
     this.fs.copy(this.templatePath('npmrc'), this.destinationPath('.npmrc'));
-    this.fs.copyTpl(
+    this.fs.copy(
       this.templatePath('gitignore'),
       this.destinationPath('.gitignore'),
-      includes,
     );
     this.fs.copyTpl(
       this.templatePath('LICENSE'),
@@ -171,10 +172,9 @@ export default class TypescriptGenerator extends Generator {
       this.destinationPath('README.md'),
       includes,
     );
-    this.fs.copyTpl(
+    this.fs.copy(
       this.templatePath('vitest.config.ts'),
       this.destinationPath('vitest.config.ts'),
-      includes,
     );
   }
 }
