@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.5](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.4...v4.16.5) (2025-10-31)
+
+
+### Bug Fixes
+
+* enable package-lock and disable npm scripts ([b203db7](https://github.com/cheminfo/generator-cheminfo/commit/b203db7390020bd45a93b4613d71ffc6445b08dd))
+
 ## [4.16.4](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.3...v4.16.4) (2025-10-15)
 
 
