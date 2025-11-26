@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.6](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.5...v4.16.6) (2025-11-26)
+
+
+### Bug Fixes
+
+* only include ts files in coverage ([c7f6965](https://github.com/cheminfo/generator-cheminfo/commit/c7f6965ca387db8607fdcc1bab11a654eee56802))
+
 ## [4.16.5](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.4...v4.16.5) (2025-10-31)
 
 
