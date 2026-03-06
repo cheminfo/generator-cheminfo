@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.16.7](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.6...v4.16.7) (2026-03-06)
+
+
+### Bug Fixes
+
+* prepare for TS 6.0 ([0db467f](https://github.com/cheminfo/generator-cheminfo/commit/0db467f422d9c35ec57da1cdbfd1f3b630f79c46))
+
 ## [4.16.6](https://github.com/cheminfo/generator-cheminfo/compare/v4.16.5...v4.16.6) (2025-11-26)
 
 
