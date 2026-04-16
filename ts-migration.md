@@ -26,7 +26,7 @@
      "compilerOptions": {
        "noUncheckedIndexedAccess": true,
        "outDir": "lib",
-       "types": ["node"],
+       "types": ["node"]
      },
      "include": ["src", "vite*.ts"]
    }
