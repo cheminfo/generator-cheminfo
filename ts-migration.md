@@ -36,6 +36,9 @@
    ```json
    {
      "extends": "./tsconfig.json",
+     "compilerOptions": {
+       "rootDir": "src"
+     },
      "include": ["src"],
      "exclude": ["**/__tests__", "**/*.test.*"]
    }
