@@ -20,13 +20,13 @@ export default class TypescriptGenerator extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'Your package name',
+        message: 'Your package name (e.g. my-package-name or @zakodium/my-package-name)',
         default: path.basename(this.destinationRoot()), // Default to current folder name
       },
       {
         type: 'input',
         name: 'org',
-        message: 'GitHub organization',
+        message: 'GitHub organization (no @)',
         default: 'cheminfo',
       },
       {
