@@ -62,6 +62,11 @@ export default class TypescriptGenerator extends Generator {
       'typescript',
       'vitest',
     ]);
+    // https://github.com/cheminfo/generator-cheminfo/issues/71
+    // override with latest eslint version compatible with `eslint-config-cheminfo-typescript`
+    const eslintVersion = await latestVersion('eslint', { version: '9.x' });
+    devDependencies['eslint'] = `^${eslintVersion}`;
+
     this.packageJson.merge({
       name: this.props.npmName,
       version: '0.0.0',
