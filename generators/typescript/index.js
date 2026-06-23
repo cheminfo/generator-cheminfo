@@ -20,13 +20,13 @@ export default class TypescriptGenerator extends Generator {
       {
         type: 'input',
         name: 'name',
-        message: 'Your package name',
+        message: 'Your package name (e.g. my-package-name or @zakodium/my-package-name)',
         default: path.basename(this.destinationRoot()), // Default to current folder name
       },
       {
         type: 'input',
         name: 'org',
-        message: 'GitHub organization',
+        message: 'GitHub organization (no @)',
         default: 'cheminfo',
       },
       {
@@ -62,6 +62,11 @@ export default class TypescriptGenerator extends Generator {
       'typescript',
       'vitest',
     ]);
+    // https://github.com/cheminfo/generator-cheminfo/issues/71
+    // override with latest eslint version compatible with `eslint-config-cheminfo-typescript`
+    const eslintVersion = await latestVersion('eslint', { version: '9.x' });
+    devDependencies['eslint'] = `^${eslintVersion}`;
+
     this.packageJson.merge({
       name: this.props.npmName,
       version: '0.0.0',
