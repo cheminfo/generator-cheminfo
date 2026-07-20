@@ -24,7 +24,8 @@
    {
      "extends": "@zakodium/tsconfig",
      "compilerOptions": {
-       "noUncheckedIndexedAccess": true,
+       "allowJs": true,
+       "noUncheckedIndexedAccess": false,
        "outDir": "lib",
        "types": ["node"]
      },
